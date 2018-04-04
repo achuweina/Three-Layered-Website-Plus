@@ -125,63 +125,62 @@
     <VSTemplate Include="DataLayer\DataLayer.vstemplate" />
     <None Include="DataLayer\ProjectTemplate.csproj" />
     <None Include="DataLayer\Properties\AssemblyInfo.cs" />
-    <Content Include="DataLayer\Website8DbContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Website8DbContext.edmx</DependentUpon>
-      <LastGenOutput>Website8DbContext.Context1.cs</LastGenOutput>
-    </Content>
-    <Content Include="DataLayer\Website8DbContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Website8DbContext.edmx</DependentUpon>
-      <LastGenOutput>Website8DbContext1.cs</LastGenOutput>
-    </Content>
-    <None Include="DataLayer\Website8DbContext.edmx.diagram">
-      <DependentUpon>Website8DbContext.edmx</DependentUpon>
+    <None Include="DataLayer\App.Config" />
+    <None Include="DataLayer\packages.config" />
+    <None Include="DataLayer\ProjectTemplateDbContext.Context.tt">
+      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
+      <LastGenOutput>ProjectTemplateDbContext.Context1.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="DataLayer\Website8DbContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Website8DbContext1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Compile Include="DataLayer\Interfaces\IRepository.cs" />
-    <Compile Include="DataLayer\Interfaces\IUnitOfWork.cs" />
-    <Compile Include="DataLayer\Repository.cs" />
-    <Compile Include="DataLayer\UnitOfWork.cs" />
-    <Compile Include="DataLayer\Website8DbContext.Designer.cs">
+    <None Include="DataLayer\ProjectTemplateDbContext.tt">
+      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
+      <LastGenOutput>ProjectTemplateDbContext.cs</LastGenOutput>
+    </None>
+    <None Include="DataLayer\ProjectTemplateDbContext.edmx.diagram">
+      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
+    </None>
+    <None Include="DataLayer\ProjectTemplateDbContext.edmx">
+      <LastGenOutput>ProjectTemplateDbContext.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataLayer\Interfaces\IRepository.cs" />
+    <None Include="DataLayer\Interfaces\IUnitOfWork.cs" />
+    <None Include="DataLayer\Repository.cs" />
+    <None Include="DataLayer\UnitOfWork.cs" />
+    <None Include="DataLayer\ProjectTemplateDbContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Website8DbContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\Website8DbContext.cs">
+      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
+    </None>
+    <None Include="DataLayer\ProjectTemplateDbContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\Website8DbContext.Context.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\ProjectTemplateDbContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Website8DbContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\Role.cs">
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\SecurityQuestion.cs">
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\User.cs">
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\UserActivity.cs">
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\UserAndPassword.cs">
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\UserDetail.cs">
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataLayer\UserSecurityQuestionAndAnswer.cs">
-      <DependentUpon>Website8DbContext.tt</DependentUpon>
-    </Compile>
+      <DependentUpon>ProjectTemplateDbContext.Context.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\Role.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\SecurityQuestion.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\User.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\UserActivity.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\UserAndPassword.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\UserDetail.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
+    <None Include="DataLayer\UserSecurityQuestionAndAnswer.cs">
+      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="WebLayer\Models\" />

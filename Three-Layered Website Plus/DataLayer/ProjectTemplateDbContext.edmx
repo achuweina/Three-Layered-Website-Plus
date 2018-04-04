@@ -178,7 +178,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="$ext_safeprojectname$DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="$ext_safeprojectname$DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false">
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="Id" />
