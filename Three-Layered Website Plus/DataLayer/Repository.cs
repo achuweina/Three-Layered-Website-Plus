@@ -3,7 +3,7 @@ using System.Data.Entity;
 using System.Linq;
 using WebSite8.Data.Interfaces;
 
-namespace WebSite8.Data
+namespace $safeprojectname$
 {
     public class Repository<TData> : IRepository<TData> where TData : class 
     {

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Website8DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="$ext_safeprojectname$DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Roles">
           <Key>
             <PropertyRef Name="Id" />
@@ -141,7 +141,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Website8DBModelStoreContainer">
+        <EntityContainer Name="$ext_safeprojectname$DBModelStoreContainer">
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="Memberships" store:Type="Tables" />
           <EntitySet Name="SecurityQuestion" EntityType="Self.SecurityQuestion" Schema="Memberships" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="Memberships" store:Type="Tables" />
@@ -178,7 +178,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Website8DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="$ext_safeprojectname$DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="Id" />
@@ -327,7 +327,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WebSite8DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="$ext_safeprojectname$DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="SecurityQuestions" EntityType="Self.SecurityQuestion" />
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -365,9 +365,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Website8DBModelStoreContainer" CdmEntityContainer="WebSite8DBEntities">
+        <EntityContainerMapping StorageEntityContainer="$ext_safeprojectname$DBModelStoreContainer" CdmEntityContainer="$ext_safeprojectname$DBEntities">
           <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="Website8DBModel.Role">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$DBModel.Role">
               <MappingFragment StoreEntitySet="Roles">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -376,7 +376,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SecurityQuestions">
-            <EntityTypeMapping TypeName="Website8DBModel.SecurityQuestion">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$DBModel.SecurityQuestion">
               <MappingFragment StoreEntitySet="SecurityQuestion">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Text" ColumnName="Text" />
@@ -385,7 +385,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="Website8DBModel.User">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$DBModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="SecurityQuestionAnswerId" ColumnName="SecurityQuestionAnswerId" />
@@ -397,7 +397,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserActivities">
-            <EntityTypeMapping TypeName="Website8DBModel.UserActivity">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$DBModel.UserActivity">
               <MappingFragment StoreEntitySet="UserActivity">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
@@ -410,7 +410,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserAndPasswords">
-            <EntityTypeMapping TypeName="Website8DBModel.UserAndPassword">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$DBModel.UserAndPassword">
               <MappingFragment StoreEntitySet="UserAndPassword">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -419,7 +419,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserDetails">
-            <EntityTypeMapping TypeName="Website8DBModel.UserDetail">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$DBModel.UserDetail">
               <MappingFragment StoreEntitySet="UserDetails">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
@@ -429,7 +429,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserSecurityQuestionAndAnswers">
-            <EntityTypeMapping TypeName="Website8DBModel.UserSecurityQuestionAndAnswer">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$DBModel.UserSecurityQuestionAndAnswer">
               <MappingFragment StoreEntitySet="UserSecurityQuestionAndAnswer">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />

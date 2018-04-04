@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebSite8.Data
+namespace $safeprojectname$
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WebSite8DBEntities : DbContext
+    public partial class $ext_safeprojectname$DBEntities : DbContext
     {
-        public WebSite8DBEntities()
-            : base("name=WebSite8DBEntities")
+        public $ext_safeprojectname$DBEntities()
+            : base("name=$ext_safeprojectname$DBEntities")
         {
         }
     

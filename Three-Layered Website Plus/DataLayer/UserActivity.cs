@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Three_Layered_Website_Plus.DataLayer
+namespace $safeprojectname$
 {
     using System;
     using System.Collections.Generic;

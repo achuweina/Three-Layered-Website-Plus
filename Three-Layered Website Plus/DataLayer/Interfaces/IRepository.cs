@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Linq;
 
-namespace WebSite8.Data.Interfaces
+namespace $safeprojectname$.Interfaces
 {
     public interface IRepository<TDataSet> where TDataSet : class 
     {

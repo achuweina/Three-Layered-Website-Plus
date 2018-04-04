@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using WebSite8.Data.Interfaces;
+using $safeprojectname$.Interfaces;
 
-namespace WebSite8.Data
+namespace $safeprojectname$
 {
     public class UnitOfWork : IUnitOfWork
     {

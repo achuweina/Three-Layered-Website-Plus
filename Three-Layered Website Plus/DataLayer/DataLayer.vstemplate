@@ -14,6 +14,26 @@
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" TargetFileName="$projectname$.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Interfaces\IRepository.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Interfaces\IUnitOfWork.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Repository.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">UnitOfWork.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.edmx</ProjectItem>
+      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.Context.tt</ProjectItem>
+      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.edmx.diagram</ProjectItem>
+      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.tt</ProjectItem>
     </Project>
   </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages>
+      <package id="EntityFramework" version="6.1.3" targetFramework="net471" />
+    </packages>
+  </WizardData>
 </VSTemplate>

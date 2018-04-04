@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Development\Testing\WebSite8\WebSite8\WebSite8.Data\Website8DbContext.edmx'. 
+﻿// T4 code generation is enabled for model '\$ext_safeprojectname$\$ext_safeprojectname$\$ext_safeprojectname$.Data\$ext_safeprojectname$DbContext.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
