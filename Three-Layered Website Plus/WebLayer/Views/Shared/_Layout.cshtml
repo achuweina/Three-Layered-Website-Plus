@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Three layer website plus</title>
+    <link type="text/css" rel="stylesheet" href="/Content/Site.css" />
+</head>
+<body>
+    <header>Three layer website plus</header>
+    <nav>
+        @Html.ActionLink("Home", "Index", "Home")
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        &copy; @DateTime.Now.Year - Three Layer Website
+    </footer>
+</body>
+</html>

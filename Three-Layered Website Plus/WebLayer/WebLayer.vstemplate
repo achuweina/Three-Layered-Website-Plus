@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Web</Name>
+    <Description>A web layer for the three layer solution</Description>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>4.7.1</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>ACD79B4D-84D3-49D9-9D38-06BA40EA0F45</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Web</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" TargetFileName="$projectname$.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">favicon.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Web.Dev.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Web.Production.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Global.asax.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App_Start\RouteConfig.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Content\Site.css</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Controllers\HomeController.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">CustomErrors\Error.aspx</ProjectItem>
+      <Folder Name="Models" TargetFolderName="Models"/>
+      <ProjectItem ReplaceParameters="true">Views\_ViewStart.cshtml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Views\Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Views\Home\Index.cshtml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Views\Shared\_Layout.cshtml</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages>
+      <package id="Microsoft.AspNet.Mvc" version="5.2.4" targetFramework="net471" />
+      <package id="Microsoft.AspNet.Razor" version="3.2.4" targetFramework="net471" />
+      <package id="Microsoft.AspNet.WebPages" version="3.2.4" targetFramework="net471" />
+      <package id="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" version="1.0.8" targetFramework="net471" />
+      <package id="Microsoft.Net.Compilers" version="2.7.0" targetFramework="net471" developmentDependency="true" />
+      <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" targetFramework="net471" />
+    </packages>
+  </WizardData>
+</VSTemplate>

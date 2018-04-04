@@ -45,25 +45,146 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.CoreUtility">
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="AssemblyInfo.cs" />
-    <None Include="Class1.cs" />
-    <None Include="ProjectTemplate.csproj" />
+    <VSTemplate Include="Three-Layered Website Plus.vstemplate">
+      <SubType>Designer</SubType>
+    </VSTemplate>
+    <None Include="Properties\AssemblyInfo.cs" />
     <None Include="Three-Layered Website Plus.ico" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Three-Layered Website Plus.vstemplate" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <!--Web Layer-->
+  <ItemGroup>
+    <VSTemplate Include="WebLayer\WebLayer.vstemplate" />
+    <None Include="WebLayer\ProjectTemplate.csproj" />
+    <None Include="WebLayer\Properties\AssemblyInfo.cs" />
+    <None Include="WebLayer\App_Start\RouteConfig.cs" />
+    <None Include="WebLayer\Content\Site.css" />
+    <None Include="WebLayer\Controllers\HomeController.cs" />
+    <None Include="WebLayer\CustomErrors\Error.aspx" />
+    <None Include="WebLayer\Views\Home\Index.cshtml" />
+    <None Include="WebLayer\Views\Shared\_Layout.cshtml" />
+    <None Include="WebLayer\Views\Web.config" />
+    <None Include="WebLayer\Views\_ViewStart.cshtml" />
+    <None Include="WebLayer\Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WebLayer\Web.Dev.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="WebLayer\Web.Production.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="WebLayer\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </None>
+    <None Include="WebLayer\Global.asax" />
+    <None Include="WebLayer\favicon.ico" />
+    <None Include="WebLayer\packages.config" />
+  </ItemGroup>
+  <!--Business Layer-->
+  <ItemGroup>
+    <VSTemplate Include="BusinessLayer\BusinessLayer.vstemplate" />
+    <None Include="BusinessLayer\ProjectTemplate.csproj" />
+    <None Include="BusinessLayer\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <!--Common Layer-->
+  <ItemGroup>
+    <VSTemplate Include="CommonLayer\CommonLayer.vstemplate" />
+    <None Include="CommonLayer\ProjectTemplate.csproj" />
+    <None Include="CommonLayer\IOC\DefaultConventionWithProxyScanner.cs" />
+    <None Include="CommonLayer\IOC\IoCSetup.cs" />
+    <None Include="CommonLayer\IOC\ProxyFuncInterceptor.cs" />
+    <None Include="CommonLayer\IOC\StructureMapDependencyResolver.cs" />
+    <None Include="CommonLayer\Properties\AssemblyInfo.cs" />
+    <None Include="CommonLayer\packages.config" />
+  </ItemGroup>
+  <!--Security Layer-->
+  <ItemGroup>
+    <VSTemplate Include="SecurityLayer\SecurityLayer.vstemplate" />
+    <None Include="SecurityLayer\ProjectTemplate.csproj" />
+    <None Include="SecurityLayer\Properties\AssemblyInfo.cs" />
+    <None Include="SecurityLayer\packages.config" />
+  </ItemGroup>
+  <!--Data layer-->
+  <ItemGroup>
+    <VSTemplate Include="DataLayer\DataLayer.vstemplate" />
+    <None Include="DataLayer\ProjectTemplate.csproj" />
+    <None Include="DataLayer\Properties\AssemblyInfo.cs" />
+    <Content Include="DataLayer\Website8DbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Website8DbContext.edmx</DependentUpon>
+      <LastGenOutput>Website8DbContext.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataLayer\Website8DbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Website8DbContext.edmx</DependentUpon>
+      <LastGenOutput>Website8DbContext1.cs</LastGenOutput>
+    </Content>
+    <None Include="DataLayer\Website8DbContext.edmx.diagram">
+      <DependentUpon>Website8DbContext.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="DataLayer\Website8DbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Website8DbContext1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Compile Include="DataLayer\Interfaces\IRepository.cs" />
+    <Compile Include="DataLayer\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="DataLayer\Repository.cs" />
+    <Compile Include="DataLayer\UnitOfWork.cs" />
+    <Compile Include="DataLayer\Website8DbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Website8DbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\Website8DbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\Website8DbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Website8DbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\Role.cs">
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\SecurityQuestion.cs">
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\User.cs">
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\UserActivity.cs">
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\UserAndPassword.cs">
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\UserDetail.cs">
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\UserSecurityQuestionAndAnswer.cs">
+      <DependentUpon>Website8DbContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WebLayer\Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
