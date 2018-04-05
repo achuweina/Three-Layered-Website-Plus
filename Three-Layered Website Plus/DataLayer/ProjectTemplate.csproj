@@ -7,8 +7,8 @@
     <ProjectGuid>$guid3$</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>$safeprojectname$</RootNamespace>
-    <AssemblyName>$safeprojectname$</AssemblyName>
+    <RootNamespace>$ext_safeprojectname$</RootNamespace>
+    <AssemblyName>$ext_safeprojectname$</AssemblyName>
     <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,62 +42,62 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <Compile Include="ProjectTemplateDbContext.Context.tt">
+    <Content Include="$ext_safeprojectname$DbContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
-      <LastGenOutput>ProjectTemplateDbContext.Context1.cs</LastGenOutput>
-    </Compile>
-    <Compile Include="ProjectTemplateDbContext.tt">
+      <DependentUpon>$ext_safeprojectname$DbContext.edmx</DependentUpon>
+      <LastGenOutput>$ext_safeprojectname$DbContext.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="$ext_safeprojectname$DbContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
-      <LastGenOutput>ProjectTemplateDbContext1.cs</LastGenOutput>
-    </Compile>
-    <Compile Include="ProjectTemplateDbContext.edmx.diagram">
-      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectTemplateDbContext.edmx">
+      <DependentUpon>$ext_safeprojectname$DbContext.edmx</DependentUpon>
+      <LastGenOutput>$ext_safeprojectname$DbContext1.cs</LastGenOutput>
+    </Content>
+    <None Include="$ext_safeprojectname$DbContext.edmx.diagram">
+      <DependentUpon>$ext_safeprojectname$DbContext.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="$ext_safeprojectname$DbContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ProjectTemplateDbContext1.Designer.cs</LastGenOutput>
-    </Compile>
+      <LastGenOutput>$ext_safeprojectname$DbContext1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="UnitOfWork.cs" />
-    <Compile Include="ProjectTemplateDbContext.Designer.cs">
+    <Compile Include="$ext_safeprojectname$DbContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTemplateDbContext.edmx</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ProjectTemplateDbContext.cs">
+    <Compile Include="$ext_safeprojectname$DbContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProjectTemplateDbContext.Context.cs">
+    <Compile Include="$ext_safeprojectname$DbContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTemplateDbContext.Context.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="SecurityQuestion.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="UserActivity.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="UserAndPassword.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="UserDetail.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="UserSecurityQuestionAndAnswer.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>$ext_safeprojectname$DbContext.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

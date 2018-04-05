@@ -20,12 +20,25 @@
       <ProjectItem ReplaceParameters="true">packages.config</ProjectItem>
       <ProjectItem ReplaceParameters="true">Repository.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">UnitOfWork.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.edmx</ProjectItem>
-      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.Context.tt</ProjectItem>
-      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.Designer.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.edmx.diagram</ProjectItem>
-      <ProjectItem ReplaceParameters="true">ProjectTemplateDbContext.tt</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.edmx" ReplaceParameters="true">ProjectTemplateDbContext.edmx</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.Context.cs" ReplaceParameters="true">ProjectTemplateDbContext.Context.cs</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.Context.tt" ReplaceParameters="true">ProjectTemplateDbContext.Context.tt</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.Designer.cs" ReplaceParameters="true">ProjectTemplateDbContext.Designer.cs</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.edmx.diagram" ReplaceParameters="true">ProjectTemplateDbContext.edmx.diagram</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.tt" ReplaceParameters="true">ProjectTemplateDbContext.tt</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.cs" ReplaceParameters="true">ProjectTemplateDbContext.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Role.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">SecurityQuestion.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">User.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">UserActivity.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">UserAndPassword.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">UserDetail.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">UserSecurityQuestionAndAnswer.cs</ProjectItem>
     </Project>
+    <CustomParameters>
+      <CustomParameter Name="CSDLSchemaNamespace" Value="http://schemas.microsoft.com/ado/2009/11/edm"/>
+      <CustomParameter Name="CSDLSchemaCustomAnnotation" Value="http://schemas.microsoft.com/ado/2013/11/edm/customannotation"/>
+    </CustomParameters>
   </TemplateContent>
   <WizardExtension>
     <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>

@@ -61,6 +61,7 @@
     <VSTemplate Include="Three-Layered Website Plus.vstemplate">
       <SubType>Designer</SubType>
     </VSTemplate>
+    <None Include="App.Config" />
     <None Include="Properties\AssemblyInfo.cs" />
     <None Include="Three-Layered Website Plus.ico" />
   </ItemGroup>

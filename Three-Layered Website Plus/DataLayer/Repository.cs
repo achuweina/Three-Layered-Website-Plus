@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using WebSite8.Data.Interfaces;
+using $safeprojectname$.Interfaces;
 
 namespace $safeprojectname$
 {
