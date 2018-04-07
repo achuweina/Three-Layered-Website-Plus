@@ -17,6 +17,7 @@
       <ProjectTemplateLink ProjectName="$projectname$.Web" CopyParameters="true">WebLayer\WebLayer.vstemplate</ProjectTemplateLink>
       <ProjectTemplateLink ProjectName="$projectname$.Business" CopyParameters="true">BusinessLayer\BusinessLayer.vstemplate</ProjectTemplateLink>
       <ProjectTemplateLink ProjectName="$projectname$.Data" CopyParameters="true">DataLayer\DataLayer.vstemplate</ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.Database" CopyParameters="true">DatabaseLayer\DatabaseLayer.vstemplate</ProjectTemplateLink>
       <ProjectTemplateLink ProjectName="$projectname$.Common" CopyParameters="true">CommonLayer\CommonLayer.vstemplate</ProjectTemplateLink>
       <ProjectTemplateLink ProjectName="$projectname$.Security" CopyParameters="true">SecurityLayer\SecurityLayer.vstemplate</ProjectTemplateLink>
     </ProjectCollection>

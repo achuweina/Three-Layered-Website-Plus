@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Dev</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>$ext_safeprojectname$.DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>$guid6$</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>library</OutputType>
+    <RootPath></RootPath>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>$ext_safeprojectname$.DB</RootNamespace>
+    <AssemblyName>$ext_safeprojectname$.DB</AssemblyName>
+    <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Dev|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Dev\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Data" />
+    <Folder Include="Schema" />
+    <Folder Include="Schema\Schemas" />
+    <Folder Include="Schema\Tables" />
+    <Folder Include="Schema\StoredProcedure" />
+    <Folder Include="Schema\Views" />
+    <Folder Include="Schema\Tables\Membership" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema\Schemas\Membership.sql" />
+    <Build Include="Schema\Tables\Membership\User.sql" />
+    <Build Include="Schema\Tables\Membership\SecurityQuestion.sql" />
+    <Build Include="Schema\Tables\Membership\UserSecurityQuestionAndAnswer.sql" />
+    <Build Include="Schema\Tables\Membership\UserAndPassword.sql" />
+    <Build Include="Schema\Tables\Membership\UserActivity.sql" />
+    <Build Include="Schema\Tables\Membership\UserDetails.sql" />
+    <Build Include="Schema\Tables\Membership\Role.sql" />
+    <Build Include="Schema\Tables\Membership\UserToRole.sql" />
+    <None Include="Data\AddAdmin.sql" />
+    <None Include="Data\Roles.sql" />
+    <None Include="Data\SecurityQuestions.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$safeprojectname$.publish.xml" />
+    <PostDeploy Include="Script.PostDeployment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </PostDeploy>
+  </ItemGroup>
+</Project>

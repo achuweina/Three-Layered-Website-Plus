@@ -62,6 +62,11 @@
       <SubType>Designer</SubType>
     </VSTemplate>
     <None Include="App.Config" />
+    <EntityDeploy Include="DataLayer\WebSite28DbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WebSite28DbContext1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataLayer\WebSite28DbContext.edmx.diagram" />
     <None Include="Properties\AssemblyInfo.cs" />
     <None Include="Three-Layered Website Plus.ico" />
   </ItemGroup>
@@ -162,29 +167,93 @@
       <DependentUpon>ProjectTemplateDbContext.Context.tt</DependentUpon>
     </None>
     <None Include="DataLayer\Role.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
     </None>
     <None Include="DataLayer\SecurityQuestion.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
     </None>
     <None Include="DataLayer\User.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
     </None>
     <None Include="DataLayer\UserActivity.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
     </None>
     <None Include="DataLayer\UserAndPassword.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
     </None>
     <None Include="DataLayer\UserDetail.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
     </None>
     <None Include="DataLayer\UserSecurityQuestionAndAnswer.cs">
-      <DependentUpon>ProjectTemplateDbContext.tt</DependentUpon>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DatabaseLayer\Properties\" />
+    <Folder Include="DatabaseLayer\Schema\StoredProcedure\" />
+    <Folder Include="DatabaseLayer\Schema\Views\" />
     <Folder Include="WebLayer\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SecurityLayer\Providers\Membership.cs" />
+    <None Include="SecurityLayer\Providers\RoleManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <VSTemplate Include="DatabaseLayer\DatabaseLayer.vstemplate" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseLayer\ProjectTemplate.sqlproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseLayer\Data\AddAdmin.sql" />
+    <None Include="DatabaseLayer\Data\Roles.sql" />
+    <None Include="DatabaseLayer\Data\SecurityQuestions.sql" />
+    <None Include="DatabaseLayer\Schema\Schemas\Membership.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\Role.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\SecurityQuestion.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\User.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\UserActivity.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\UserAndPassword.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\UserDetails.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\UserSecurityQuestionAndAnswer.sql" />
+    <None Include="DatabaseLayer\Schema\Tables\Membership\UserToRole.sql" />
+    <None Include="DatabaseLayer\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseLayer\ProjectTemplate.DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataLayer\UserToRole.cs">
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\WebSite28DbContext.Context.cs" />
+    <Compile Include="DataLayer\WebSite28DbContext.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebSite28DbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\WebSite28DbContext.cs" />
+    <Compile Include="DataLayer\WebSite28DbContext.Designer.cs" />
+    <Compile Include="DataLayer\WebSite28DbContext1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebSite28DbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\WebSite28DbContext1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebSite28DbContext.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataLayer\WebSite28DbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WebSite28DbContext.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataLayer\WebSite28DbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WebSite28DbContext1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

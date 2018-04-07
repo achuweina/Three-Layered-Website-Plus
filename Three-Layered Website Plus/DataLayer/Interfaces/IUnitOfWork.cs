@@ -12,5 +12,6 @@ namespace $safeprojectname$.Interfaces
         IRepository<UserAndPassword> UserAndPasswordRepository { get; }
         IRepository<UserDetail> UserDetailRepository { get; }
         IRepository<UserSecurityQuestionAndAnswer> UserSecurityQuestionAndAnswerRepository { get; }
+        void Commit();
     }
 }

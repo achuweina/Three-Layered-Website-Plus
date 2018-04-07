@@ -15,6 +15,8 @@
     <Project File="ProjectTemplate.csproj" TargetFileName="$projectname$.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Providers\Membership.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Providers\RoleManager.cs</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
@@ -23,6 +25,7 @@
   </WizardExtension>
   <WizardData>
     <packages>
+      <package id="BCrypt" version="1.0.0.0" targetFramework="net471" />
     </packages>
   </WizardData>
 </VSTemplate>

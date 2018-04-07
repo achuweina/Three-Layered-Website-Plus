@@ -7,8 +7,8 @@
     <ProjectGuid>$guid3$</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>$ext_safeprojectname$</RootNamespace>
-    <AssemblyName>$ext_safeprojectname$</AssemblyName>
+    <RootNamespace>$ext_safeprojectname$.Data</RootNamespace>
+    <AssemblyName>$ext_safeprojectname$.Data</AssemblyName>
     <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

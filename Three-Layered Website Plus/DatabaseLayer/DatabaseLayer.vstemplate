@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Database</Name>
+    <Description>A database layer for the three layer solution</Description>
+    <ProjectType>SSDT</ProjectType>
+    <RequiredFrameworkVersion>4.7.1</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>79DAACB1-13FA-4487-94EE-B1E6E65FA71D</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Database</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.sqlproj" TargetFileName="$projectname$.sqlproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true">Data\AddAdmin.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Data\Roles.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Data\SecurityQuestions.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Schemas\Membership.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\Role.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\SecurityQuestion.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\User.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\UserActivity.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\UserAndPassword.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\UserDetails.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\UserSecurityQuestionAndAnswer.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Schema\Tables\Membership\UserToRole.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Script.PostDeployment.sql</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.publish.xml">ProjectTemplate.DB.publish.xml</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Data.Tools.Package, Version=15.1.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Data.Tools.Package.Project.TemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

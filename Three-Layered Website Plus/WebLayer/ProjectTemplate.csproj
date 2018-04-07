@@ -72,8 +72,8 @@
       <Project>{$guid4$}</Project>
       <Name>$ext_safeprojectname$.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\$ext_safeprojectname$.Common\$ext_safeprojectname$.Security.csproj">
-      <Project>{$guid6$}</Project>
+    <ProjectReference Include="..\$ext_safeprojectname$.Security\$ext_safeprojectname$.Security.csproj">
+      <Project>{$guid5$}</Project>
       <Name>$ext_safeprojectname$.Security</Name>
     </ProjectReference>
   </ItemGroup>
