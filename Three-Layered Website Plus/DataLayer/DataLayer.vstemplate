@@ -20,13 +20,13 @@
       <ProjectItem ReplaceParameters="true">packages.config</ProjectItem>
       <ProjectItem ReplaceParameters="true">Repository.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">UnitOfWork.cs</ProjectItem>
-      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.edmx" ReplaceParameters="true">ProjectTemplateDbContext.edmx</ProjectItem>
-      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.Context.cs" ReplaceParameters="true">ProjectTemplateDbContext.Context.cs</ProjectItem>
-      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.Context.tt" ReplaceParameters="true">ProjectTemplateDbContext.Context.tt</ProjectItem>
-      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.Designer.cs" ReplaceParameters="true">ProjectTemplateDbContext.Designer.cs</ProjectItem>
-      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.edmx.diagram" ReplaceParameters="true">ProjectTemplateDbContext.edmx.diagram</ProjectItem>
-      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.tt" ReplaceParameters="true">ProjectTemplateDbContext.tt</ProjectItem>
-      <ProjectItem TargetFileName="$ext_safeprojectname$DbContext.cs" ReplaceParameters="true">ProjectTemplateDbContext.cs</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$.edmx" ReplaceParameters="true">ProjectTemplate.edmx</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$.Context.cs" ReplaceParameters="true">ProjectTemplate.Context.cs</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$.Context.tt" ReplaceParameters="true">ProjectTemplate.Context.tt</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$.Designer.cs" ReplaceParameters="true">ProjectTemplate.Designer.cs</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$.edmx.diagram" ReplaceParameters="true">ProjectTemplate.edmx.diagram</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$.tt" ReplaceParameters="true">ProjectTemplate.tt</ProjectItem>
+      <ProjectItem TargetFileName="$ext_safeprojectname$.cs" ReplaceParameters="true">ProjectTemplate.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Role.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">SecurityQuestion.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">User.cs</ProjectItem>

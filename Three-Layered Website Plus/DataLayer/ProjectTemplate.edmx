@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="$ext_safeprojectname$.DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="SystemDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SecurityQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SystemDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SecurityQuestionAnswerId" Type="int" Nullable="false" />
+          <Property Name="UserAndPasswordId" Type="int" Nullable="false" />
+          <Property Name="UserActivityId" Type="int" Nullable="false" />
+          <Property Name="UserDetailsId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserActivity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IsApproved" Type="bit" Nullable="false" />
+          <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLoggedInDate" Type="datetime" />
+          <Property Name="LastActiveDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLockedOutDate" Type="datetime" />
+          <Property Name="FailedLogins" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserAndPassword">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LastChanged" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="UserSecurityQuestionAndAnswer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QuestionId" Type="int" Nullable="false" />
+          <Property Name="Answer" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserToRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_User_Details">
+          <End Role="UserDetails" Type="Self.UserDetails" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserDetails">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserDetailsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserActivity">
+          <End Role="UserActivity" Type="Self.UserActivity" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserActivity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserActivityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserAndPassword">
+          <End Role="UserAndPassword" Type="Self.UserAndPassword" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserAndPassword">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserAndPasswordId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserSecurityQuestionAndAnswer">
+          <End Role="UserSecurityQuestionAndAnswer" Type="Self.UserSecurityQuestionAndAnswer" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSecurityQuestionAndAnswer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="SecurityQuestionAnswerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserSecurityQuestionAndAnswer_SecurityQuestion">
+          <End Role="SecurityQuestion" Type="Self.SecurityQuestion" Multiplicity="1" />
+          <End Role="UserSecurityQuestionAndAnswer" Type="Self.UserSecurityQuestionAndAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecurityQuestion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserSecurityQuestionAndAnswer">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserToRole_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="UserToRole" Type="Self.UserToRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserToRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserToRole_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserToRole" Type="Self.UserToRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserToRole">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="$ext_safeprojectname$DBModelStoreContainer">
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="Membership" store:Type="Tables" />
+          <EntitySet Name="SecurityQuestion" EntityType="Self.SecurityQuestion" Schema="Membership" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="Membership" store:Type="Tables" />
+          <EntitySet Name="UserActivity" EntityType="Self.UserActivity" Schema="Membership" store:Type="Tables" />
+          <EntitySet Name="UserAndPassword" EntityType="Self.UserAndPassword" Schema="Membership" store:Type="Tables" />
+          <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="Membership" store:Type="Tables" />
+          <EntitySet Name="UserSecurityQuestionAndAnswer" EntityType="Self.UserSecurityQuestionAndAnswer" Schema="Membership" store:Type="Tables" />
+          <EntitySet Name="UserToRole" EntityType="Self.UserToRole" Schema="Membership" store:Type="Tables" />
+          <AssociationSet Name="FK_User_Details" Association="Self.FK_User_Details">
+            <End Role="UserDetails" EntitySet="UserDetails" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserActivity" Association="Self.FK_User_UserActivity">
+            <End Role="UserActivity" EntitySet="UserActivity" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserAndPassword" Association="Self.FK_User_UserAndPassword">
+            <End Role="UserAndPassword" EntitySet="UserAndPassword" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserSecurityQuestionAndAnswer" Association="Self.FK_User_UserSecurityQuestionAndAnswer">
+            <End Role="UserSecurityQuestionAndAnswer" EntitySet="UserSecurityQuestionAndAnswer" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserSecurityQuestionAndAnswer_SecurityQuestion" Association="Self.FK_UserSecurityQuestionAndAnswer_SecurityQuestion">
+            <End Role="SecurityQuestion" EntitySet="SecurityQuestion" />
+            <End Role="UserSecurityQuestionAndAnswer" EntitySet="UserSecurityQuestionAndAnswer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserToRole_Role" Association="Self.FK_UserToRole_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="UserToRole" EntitySet="UserToRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserToRole_User" Association="Self.FK_UserToRole_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserToRole" EntitySet="UserToRole" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="$ext_safeprojectname$.DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SystemDefault" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserToRoles" Relationship="Self.FK_UserToRole_Role" FromRole="Role" ToRole="UserToRole" />
+        </EntityType>
+        <EntityType Name="SecurityQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SystemDefault" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserSecurityQuestionAndAnswers" Relationship="Self.FK_UserSecurityQuestionAndAnswer_SecurityQuestion" FromRole="SecurityQuestion" ToRole="UserSecurityQuestionAndAnswer" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SecurityQuestionAnswerId" Type="Int32" Nullable="false" />
+          <Property Name="UserAndPasswordId" Type="Int32" Nullable="false" />
+          <Property Name="UserActivityId" Type="Int32" Nullable="false" />
+          <Property Name="UserDetailsId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserDetail" Relationship="Self.FK_User_Details" FromRole="User" ToRole="UserDetails" />
+          <NavigationProperty Name="UserActivity" Relationship="Self.FK_User_UserActivity" FromRole="User" ToRole="UserActivity" />
+          <NavigationProperty Name="UserAndPassword" Relationship="Self.FK_User_UserAndPassword" FromRole="User" ToRole="UserAndPassword" />
+          <NavigationProperty Name="UserSecurityQuestionAndAnswer" Relationship="Self.FK_User_UserSecurityQuestionAndAnswer" FromRole="User" ToRole="UserSecurityQuestionAndAnswer" />
+          <NavigationProperty Name="UserToRoles" Relationship="Self.FK_UserToRole_User" FromRole="User" ToRole="UserToRole" />
+        </EntityType>
+        <EntityType Name="UserActivity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+          <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLoggedInDate" Type="DateTime" Precision="3" />
+          <Property Name="LastActiveDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLockedOutDate" Type="DateTime" Precision="3" />
+          <Property Name="FailedLogins" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_UserActivity" FromRole="UserActivity" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserAndPassword">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastChanged" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_UserAndPassword" FromRole="UserAndPassword" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_Details" FromRole="UserDetails" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserSecurityQuestionAndAnswer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionId" Type="Int32" Nullable="false" />
+          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="SecurityQuestion" Relationship="Self.FK_UserSecurityQuestionAndAnswer_SecurityQuestion" FromRole="UserSecurityQuestionAndAnswer" ToRole="SecurityQuestion" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_UserSecurityQuestionAndAnswer" FromRole="UserSecurityQuestionAndAnswer" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserToRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_UserToRole_Role" FromRole="UserToRole" ToRole="Role" />
+          <NavigationProperty Name="User" Relationship="Self.FK_UserToRole_User" FromRole="UserToRole" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_UserToRole_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="UserToRole" Type="Self.UserToRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserToRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserSecurityQuestionAndAnswer_SecurityQuestion">
+          <End Role="SecurityQuestion" Type="Self.SecurityQuestion" Multiplicity="1" />
+          <End Role="UserSecurityQuestionAndAnswer" Type="Self.UserSecurityQuestionAndAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecurityQuestion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserSecurityQuestionAndAnswer">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Details">
+          <End Role="UserDetails" Type="Self.UserDetail" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserDetails">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserDetailsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserActivity">
+          <End Role="UserActivity" Type="Self.UserActivity" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserActivity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserActivityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserAndPassword">
+          <End Role="UserAndPassword" Type="Self.UserAndPassword" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserAndPassword">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserAndPasswordId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserSecurityQuestionAndAnswer">
+          <End Role="UserSecurityQuestionAndAnswer" Type="Self.UserSecurityQuestionAndAnswer" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSecurityQuestionAndAnswer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="SecurityQuestionAnswerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserToRole_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserToRole" Type="Self.UserToRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserToRole">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="$ext_safeprojectname$Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="SecurityQuestions" EntityType="Self.SecurityQuestion" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserActivities" EntityType="Self.UserActivity" />
+          <EntitySet Name="UserAndPasswords" EntityType="Self.UserAndPassword" />
+          <EntitySet Name="UserDetails" EntityType="Self.UserDetail" />
+          <EntitySet Name="UserSecurityQuestionAndAnswers" EntityType="Self.UserSecurityQuestionAndAnswer" />
+          <EntitySet Name="UserToRoles" EntityType="Self.UserToRole" />
+          <AssociationSet Name="FK_UserToRole_Role" Association="Self.FK_UserToRole_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="UserToRole" EntitySet="UserToRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserSecurityQuestionAndAnswer_SecurityQuestion" Association="Self.FK_UserSecurityQuestionAndAnswer_SecurityQuestion">
+            <End Role="SecurityQuestion" EntitySet="SecurityQuestions" />
+            <End Role="UserSecurityQuestionAndAnswer" EntitySet="UserSecurityQuestionAndAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Details" Association="Self.FK_User_Details">
+            <End Role="UserDetails" EntitySet="UserDetails" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserActivity" Association="Self.FK_User_UserActivity">
+            <End Role="UserActivity" EntitySet="UserActivities" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserAndPassword" Association="Self.FK_User_UserAndPassword">
+            <End Role="UserAndPassword" EntitySet="UserAndPasswords" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserSecurityQuestionAndAnswer" Association="Self.FK_User_UserSecurityQuestionAndAnswer">
+            <End Role="UserSecurityQuestionAndAnswer" EntitySet="UserSecurityQuestionAndAnswers" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserToRole_User" Association="Self.FK_UserToRole_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserToRole" EntitySet="UserToRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="$ext_safeprojectname$DBModelStoreContainer" CdmEntityContainer="$ext_safeprojectname$Entities">
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SystemDefault" ColumnName="SystemDefault" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SecurityQuestions">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.SecurityQuestion">
+              <MappingFragment StoreEntitySet="SecurityQuestion">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="SystemDefault" ColumnName="SystemDefault" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SecurityQuestionAnswerId" ColumnName="SecurityQuestionAnswerId" />
+                <ScalarProperty Name="UserAndPasswordId" ColumnName="UserAndPasswordId" />
+                <ScalarProperty Name="UserActivityId" ColumnName="UserActivityId" />
+                <ScalarProperty Name="UserDetailsId" ColumnName="UserDetailsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserActivities">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.UserActivity">
+              <MappingFragment StoreEntitySet="UserActivity">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LastLoggedInDate" ColumnName="LastLoggedInDate" />
+                <ScalarProperty Name="LastActiveDate" ColumnName="LastActiveDate" />
+                <ScalarProperty Name="LastLockedOutDate" ColumnName="LastLockedOutDate" />
+                <ScalarProperty Name="FailedLogins" ColumnName="FailedLogins" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAndPasswords">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.UserAndPassword">
+              <MappingFragment StoreEntitySet="UserAndPassword">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDetails">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.UserDetail">
+              <MappingFragment StoreEntitySet="UserDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSecurityQuestionAndAnswers">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.UserSecurityQuestionAndAnswer">
+              <MappingFragment StoreEntitySet="UserSecurityQuestionAndAnswer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserToRoles">
+            <EntityTypeMapping TypeName="$ext_safeprojectname$.DBModel.UserToRole">
+              <MappingFragment StoreEntitySet="UserToRole">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

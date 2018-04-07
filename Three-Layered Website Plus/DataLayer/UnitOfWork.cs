@@ -5,7 +5,7 @@ namespace $safeprojectname$
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly $ext_safeprojectname$DBEntities _database = new $ext_safeprojectname$DBEntities();
+        private readonly $ext_safeprojectname$Entities _database = new $ext_safeprojectname$Entities();
         public void Dispose()
         {
             _database.Dispose();
