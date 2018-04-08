@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Routing;
+using $ext_safeprojectname$.Common.IOC;
 
 namespace $safeprojectname$
 {
@@ -7,6 +8,7 @@ namespace $safeprojectname$
     {
         protected void Application_Start()
         {
+            IoCSetup.Now();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 

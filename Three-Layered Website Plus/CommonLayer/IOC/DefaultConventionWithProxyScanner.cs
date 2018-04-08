@@ -34,7 +34,7 @@ namespace $safeprojectname$.IOC
         {
             var genericPolicyType = typeof(InterceptorPolicy<>);
             var policyType = genericPolicyType.MakeGenericType(pluginType);
-            return (IInterceptorPolicy)Activator.CreateInstance(policyType, CreateInterceptor(pluginType));
+            return (IInterceptorPolicy)Activator.CreateInstance(policyType, new object[] { CreateInterceptor(pluginType), null });
         }
 
         public IInterceptor CreateInterceptor(Type pluginType)

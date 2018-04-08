@@ -185,21 +185,6 @@
     <None Include="DatabaseLayer\ProjectTemplate.DB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataLayer\ProjectTemplate.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTemplate.Context.tt</DependentUpon>
-    </None>
-    <None Include="DataLayer\ProjectTemplate.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTemplate.tt</DependentUpon>
-    </None>
-    <None Include="DataLayer\ProjectTemplate.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTemplate.edmx</DependentUpon>
-    </None>
     <None Include="DataLayer\Role.cs">
       <DependentUpon>ProjectTemplate.tt</DependentUpon>
     </None>
@@ -227,15 +212,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DataLayer\ProjectTemplate.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProjectTemplate.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ProjectTemplate.Context.cs</LastGenOutput>
     </None>
     <None Include="DataLayer\ProjectTemplate.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProjectTemplate.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ProjectTemplate.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataLayer\ProjectTemplate.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTemplate.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\ProjectTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\ProjectTemplate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTemplate.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
