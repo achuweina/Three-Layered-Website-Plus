@@ -27,7 +27,7 @@
       <ProjectItem ReplaceParameters="true">Controllers\HomeController.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Controllers\UserController.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">CustomErrors\Error.aspx</ProjectItem>
-      <Folder Name="Models" TargetFolderName="Models"/>
+      <ProjectItem ReplaceParameters="true">Models\User\Login.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\_ViewStart.cshtml</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\Web.config</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\Home\Index.cshtml</ProjectItem>

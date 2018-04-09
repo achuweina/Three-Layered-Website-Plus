@@ -159,7 +159,6 @@
     <Folder Include="DatabaseLayer\Properties\" />
     <Folder Include="DatabaseLayer\Schema\StoredProcedure\" />
     <Folder Include="DatabaseLayer\Schema\Views\" />
-    <Folder Include="WebLayer\Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SecurityLayer\Providers\Membership.cs" />
@@ -243,6 +242,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.edmx</DependentUpon>
     </Compile>
+    <None Include="WebLayer\Models\User\Login.cs" />
     <None Include="WebLayer\Controllers\UserController.cs" />
   </ItemGroup>
   <ItemGroup>

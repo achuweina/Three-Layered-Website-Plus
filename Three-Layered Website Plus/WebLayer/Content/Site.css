@@ -18,15 +18,15 @@ nav {
     color: #ffffff;
 }
 
-    nav a {
-        color: #ffffff;
-        text-decoration: none;
-        margin-right: 1vw;
-    }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 1vw;
+}
 
-        nav a:hover {
-            color: #000000;
-        }
+nav a:hover {
+    color: #000000;
+}
 
 main {
     display: block;
@@ -35,6 +35,11 @@ main {
     font-size: 1.5vh;
     text-align: center;
     overflow: auto;
+}
+
+main form input {
+    padding: 0;
+    width: 20vw;
 }
 
 footer {
