@@ -24,7 +24,8 @@ namespace $safeprojectname$.Controllers
             FormsAuthentication.RedirectFromLoginPage(details.Username, details.KeepLoggedIn, FormsAuthentication.FormsCookiePath);
             return View();
         }
-
+        
+        [Authorize]
         public ActionResult Account()
         {
             return View();

@@ -100,16 +100,13 @@
     <Compile Include="Controllers\HomeController.cs"/>
     <Compile Include="Controllers\UserController.cs"/>
     <Content Include="CustomErrors\Error.aspx"/>
-    <Content Include="Models\User\Login.cs"/>
+    <Compile Include="Models\User\Login.cs"/>
     <Content Include="Views\_ViewStart.cshtml"/>
     <Content Include="Views\Web.config"/>
     <Content Include="Views\Home\Index.cshtml"/>
     <Content Include="Views\User\Login.cshtml"/>
     <Content Include="Views\User\Account.cshtml"/>
     <Content Include="Views\Shared\_Layout.cshtml"/>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
