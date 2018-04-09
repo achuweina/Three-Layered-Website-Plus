@@ -4,10 +4,10 @@
         <Identity Id="Three-Layered Website Plus.d3feeb36-9b95-479c-957b-572f3607dd33" Version="1.0" Language="en-US" Publisher="Liam Raper" />
         <DisplayName>Three-Layered Website Plus</DisplayName>
         <Description xml:space="preserve">This is the three-layered architecture for web sites described in the Chapter 21: Designing Web Applications https://msdn.microsoft.com/en-gb/library/ee658099.aspx and should give a nice staring point for any MVC ASP.net web project. It has also included the cross cutting layers with some setup to shorten the time for full system development.</Description>
-        <MoreInfo>https://github.com/TechLiam/Three-Layered-Website-Plus</MoreInfo>
-        <License>https://github.com/TechLiam/Three-Layered-Website-Plus/blob/master/License.txt</License>
+        <MoreInfo>https://github.com/TechLiam/Three-Layered-Website-Plus/blob/master/README.md</MoreInfo>
+        <License>License.txt</License>
         <GettingStartedGuide>https://github.com/TechLiam/Three-Layered-Website-Plus/wiki</GettingStartedGuide>
-        <ReleaseNotes>https://github.com/TechLiam/Three-Layered-Website-Plus/blob/master/Release Notes.md</ReleaseNotes>
+        <ReleaseNotes>https://github.com/TechLiam/Three-Layered-Website-Plus/blob/master/Release%20Notes.md</ReleaseNotes>
         <Icon>Three-Layered Website Plus.ico</Icon>
         <PreviewImage>Three-Layered Website Plus.ico</PreviewImage>
         <Tags>web website three-layered layered three plus + ASP.net MVC</Tags>
@@ -20,6 +20,9 @@
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7.1)" d:InstallSource="Download" Location="https://www.microsoft.com/net/download/dotnet-framework-runtime" />
     </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Three-Layered Website Plus" TargetVersion="[15.0,16.0]" d:TargetPath="|Three-Layered Website Plus;TemplateProjectOutputGroup|" d:VsixSubPath="ProjectTemplates" Path="ProjectTemplates" />
+    </Assets>
     <Prerequisites>
         <Prerequisite Id="Microsoft.Net.Component.4.7.1.SDK" Version="[15.6.27406.0,16.0)" DisplayName=".NET Framework 4.7.1 SDK" />
         <Prerequisite Id="Microsoft.Net.Component.4.7.1.TargetingPack" Version="[15.6.27406.0,16.0)" DisplayName=".NET Framework 4.7.1 targeting pack" />

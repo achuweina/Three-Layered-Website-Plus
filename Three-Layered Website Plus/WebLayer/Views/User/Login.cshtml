@@ -1,0 +1,28 @@
+﻿@model WebSite34.Web.Models.User.Login
+<h2>Login</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationMessage("Validation")
+
+    @Html.LabelFor(x => x.Username)
+    <br />
+    @Html.ValidationMessageFor(x => x.Username) <br />
+    @Html.TextBoxFor(x => x.Username)
+    <br />
+    <br />
+    @Html.LabelFor(x => x.Password)
+    <br />
+    @Html.ValidationMessageFor(x => x.Password) <br />
+    @Html.PasswordFor(x => x.Password)
+    <br />
+    <br />
+    @Html.LabelFor(x => x.KeepLoggedIn,"Keep Logged In")
+    <br />
+    @Html.CheckBoxFor(x => x.KeepLoggedIn)
+    <br />
+    <br />
+    <br />
+    <input type="submit" value="Login" />
+}

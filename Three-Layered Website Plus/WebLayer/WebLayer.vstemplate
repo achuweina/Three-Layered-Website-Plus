@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Web</Name>
+    <Name>Three-Layered Website Plus Web</Name>
     <Description>A web layer for the three layer solution</Description>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>4.7.1</RequiredFrameworkVersion>
@@ -10,6 +10,7 @@
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>Web</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
+    <Hidden>true</Hidden>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" TargetFileName="$projectname$.csproj" ReplaceParameters="true">
@@ -24,11 +25,14 @@
       <ProjectItem ReplaceParameters="true">App_Start\RouteConfig.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Content\Site.css</ProjectItem>
       <ProjectItem ReplaceParameters="true">Controllers\HomeController.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Controllers\UserController.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">CustomErrors\Error.aspx</ProjectItem>
       <Folder Name="Models" TargetFolderName="Models"/>
       <ProjectItem ReplaceParameters="true">Views\_ViewStart.cshtml</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\Web.config</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\Home\Index.cshtml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Views\User\Login.cshtml</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Views\User\Account.cshtml</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\Shared\_Layout.cshtml</ProjectItem>
     </Project>
   </TemplateContent>

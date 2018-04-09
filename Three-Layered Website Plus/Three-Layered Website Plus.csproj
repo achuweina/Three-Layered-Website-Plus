@@ -20,7 +20,7 @@
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
-    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
     <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
     <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
     <CreateVsixContainer>false</CreateVsixContainer>
@@ -87,7 +87,9 @@
   </ItemGroup>
   <!--Web Layer-->
   <ItemGroup>
-    <VSTemplate Include="WebLayer\WebLayer.vstemplate" />
+    <VSTemplate Include="WebLayer\WebLayer.vstemplate">
+      <SubType>Designer</SubType>
+    </VSTemplate>
     <None Include="..\README.md" />
     <None Include="WebLayer\ProjectTemplate.csproj" />
     <None Include="WebLayer\Properties\AssemblyInfo.cs" />
@@ -97,6 +99,8 @@
     <None Include="WebLayer\CustomErrors\Error.aspx" />
     <None Include="WebLayer\Views\Home\Index.cshtml" />
     <None Include="WebLayer\Views\Shared\_Layout.cshtml" />
+    <None Include="WebLayer\Views\User\Account.cshtml" />
+    <None Include="WebLayer\Views\User\Login.cshtml" />
     <None Include="WebLayer\Views\Web.config" />
     <None Include="WebLayer\Views\_ViewStart.cshtml" />
     <None Include="WebLayer\Web.config">
@@ -239,9 +243,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.edmx</DependentUpon>
     </Compile>
+    <None Include="WebLayer\Controllers\UserController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Source.extension.vsixmanifest" />
     <None Include="..\Release Notes.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

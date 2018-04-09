@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Data</Name>
+    <Name>Three-Layered Website Plus Data</Name>
     <Description>A data layer for the three layer solution</Description>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>4.7.1</RequiredFrameworkVersion>
@@ -10,6 +10,7 @@
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>Data</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
+    <Hidden>true</Hidden>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" TargetFileName="$projectname$.csproj" ReplaceParameters="true">
