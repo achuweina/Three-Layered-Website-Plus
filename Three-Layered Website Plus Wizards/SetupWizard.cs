@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Windows.Forms;
 using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
 
@@ -9,7 +8,9 @@ namespace Three_Layered_Website_Plus_Wizards
     {
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
         {
-            var setupWiz = new SetupWizardForm();
+            var solutionName = replacementsDictionary["$projectname$"];
+            var registeredOrganizationName = replacementsDictionary["$registeredorganization$"];
+            var setupWiz = new SetupWizardForm(solutionName,registeredOrganizationName);
             setupWiz.ShowDialog();
         }
 
