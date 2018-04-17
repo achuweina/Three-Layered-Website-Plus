@@ -73,7 +73,11 @@ namespace Three_Layered_Website_Plus_Wizards
         private void ConnectionStringSetButton_Click(object sender, EventArgs e)
         {
             var connectionStringForm = new ConnectionStringSetupForm();
-            connectionStringForm.ShowDialog();
+            var dialogResult = connectionStringForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                ConnectionStringTextbox.Text = connectionStringForm.ConnectionString();
+            }
         }
 
         private void RemoveRoleButton_Click(object sender, EventArgs e)
@@ -112,6 +116,12 @@ namespace Three_Layered_Website_Plus_Wizards
         private void AdminUserSection_TextChanged(object sender, EventArgs e)
         {
             ValidateAdminUserSection();
+        }
+
+        private void SetupWizardFormCancelButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

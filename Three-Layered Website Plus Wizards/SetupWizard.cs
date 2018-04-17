@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
 
@@ -11,7 +12,11 @@ namespace Three_Layered_Website_Plus_Wizards
             var solutionName = replacementsDictionary["$projectname$"];
             var registeredOrganizationName = replacementsDictionary["$registeredorganization$"];
             var setupWiz = new SetupWizardForm(solutionName,registeredOrganizationName);
-            setupWiz.ShowDialog();
+            var result = setupWiz.ShowDialog();
+            if (result == DialogResult.Cancel)
+            {
+                throw new WizardCancelledException();
+            }
         }
 
         public void ProjectFinishedGenerating(Project project)

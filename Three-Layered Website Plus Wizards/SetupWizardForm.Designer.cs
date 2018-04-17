@@ -433,6 +433,7 @@
             this.SetupWizardFormCancelButton.TabIndex = 32;
             this.SetupWizardFormCancelButton.Text = "Cancel";
             this.SetupWizardFormCancelButton.UseVisualStyleBackColor = true;
+            this.SetupWizardFormCancelButton.Click += new System.EventHandler(this.SetupWizardFormCancelButton_Click);
             // 
             // SetupWizardFormOkButton
             // 
