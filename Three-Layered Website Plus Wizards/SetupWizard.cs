@@ -17,6 +17,11 @@ namespace Three_Layered_Website_Plus_Wizards
             {
                 throw new WizardCancelledException();
             }
+            foreach (var setupWizSetupReplacement in setupWiz.SetupReplacements)
+            {
+                MessageBox.Show(setupWizSetupReplacement.Key + ": " + setupWizSetupReplacement.Value);
+                replacementsDictionary.Add(setupWizSetupReplacement.Key,setupWizSetupReplacement.Value);
+            }
         }
 
         public void ProjectFinishedGenerating(Project project)

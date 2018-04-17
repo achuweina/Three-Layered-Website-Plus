@@ -1,12 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using DevOne.Security.Cryptography.BCrypt;
 using Three_Layered_Website_Plus_Wizards.Properties;
 
 namespace Three_Layered_Website_Plus_Wizards
 {
     public partial class SetupWizardForm : Form
     {
+
+        public Dictionary<string,string> SetupReplacements = new Dictionary<string, string>();
+
         public SetupWizardForm(string solutionName, string organizationName)
         {
             InitializeComponent();
@@ -20,8 +26,25 @@ namespace Three_Layered_Website_Plus_Wizards
             {
                 return;
             }
+            FillReplacements();
             DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void FillReplacements()
+        {
+            SetupReplacements.Add("$WebTitle$",WebsiteTitleTextbox.Text);
+            SetupReplacements.Add("$Copyright$",CopyrightTextbox.Text);
+            SetupReplacements.Add("$HTTPS$",HTTPSCheckbox.Checked.ToString().ToLower());
+            SetupReplacements.Add("$ConnectionString$",ConnectionStringTextbox.Text);
+            SetupReplacements.Add("$AdminUsername$",AdminUserUsernameTextbox.Text);
+            var adminPassword = BCryptHelper.HashPassword(AdminUserPasswordTextbox.Text, BCryptHelper.GenerateSalt(5));
+            SetupReplacements.Add("$AdminPassword$", adminPassword);
+            SetupReplacements.Add("$AdminQuestion$", AdminUserSecurityQuestionTextbox.Text);
+            SetupReplacements.Add("$AdminAnswer$", AdminUserAnswerTextbox.Text);
+            SetupReplacements.Add("$AdminEmail$", AdminUserEmailTextbox.Text);
+            SetupReplacements.Add("$WebsiteRoles$", "IF(NOT EXISTS(SELECT [Id] FROM [Membership].[Role] WHERE [Name] = 'Administrator')) INSERT INTO[Membership].[Role]([Name],[SystemDefault]) VALUES('Administrator', 1)");
+            SetupReplacements.Add("$WebsiteSecurityQuestions$", "IF(NOT EXISTS (SELECT [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = 'What is the first and last name of your first boyfriend or girlfriend?' AND [SystemDefault] = 1)) INSERT INTO[Membership].[SecurityQuestion]([Text],[SystemDefault]) VALUES('What is the first and last name of your first boyfriend or girlfriend?', 1)");
         }
 
         private bool ValidateInputs()

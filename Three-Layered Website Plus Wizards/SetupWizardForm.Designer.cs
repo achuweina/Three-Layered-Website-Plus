@@ -69,6 +69,7 @@
             this.WebsiteCopyrightTextboxToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.HTTPSCheckboxTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.AdminUserTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SetupWizardControlsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -481,6 +482,15 @@
             this.AdminUserTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.AdminUserTooltip.ToolTipTitle = "Admin user details";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(249, -2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "1.1";
+            // 
             // SetupWizardForm
             // 
             this.AcceptButton = this.SetupWizardFormOkButton;
@@ -489,6 +499,7 @@
             this.CancelButton = this.SetupWizardFormCancelButton;
             this.ClientSize = new System.Drawing.Size(284, 660);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.SetupWizardControlsPanel);
             this.Controls.Add(this.SecurityQuestionTextTextbox);
             this.Controls.Add(this.RemoveSecurityQuestionButton);
@@ -577,5 +588,6 @@
         private System.Windows.Forms.ToolTip WebsiteCopyrightTextboxToolTip;
         private System.Windows.Forms.ToolTip HTTPSCheckboxTooltip;
         private System.Windows.Forms.ToolTip AdminUserTooltip;
+        private System.Windows.Forms.Label label1;
     }
 }
