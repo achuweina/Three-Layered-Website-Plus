@@ -42,6 +42,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DeployExtension>False</DeployExtension>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +64,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Three-Layered Website Plus Wizards\Three-Layered Website Plus Wizards.csproj">
+      <Project>{06FCDF9F-6C53-4AE1-B790-B7800EC4C48A}</Project>
+      <Name>Three-Layered Website Plus Wizards</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\Three-Layered Website Plus\Three-Layered Website Plus.csproj">
       <Project>{6BFAF9F8-8A45-42F0-A92D-EA6C45C5777D}</Project>
       <Name>Three-Layered Website Plus</Name>
