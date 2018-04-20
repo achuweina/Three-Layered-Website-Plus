@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using DevOne.Security.Cryptography.BCrypt;
 using Three_Layered_Website_Plus_Wizards.Properties;
@@ -43,8 +44,20 @@ namespace Three_Layered_Website_Plus_Wizards
             SetupReplacements.Add("$AdminQuestion$", AdminUserSecurityQuestionTextbox.Text);
             SetupReplacements.Add("$AdminAnswer$", AdminUserAnswerTextbox.Text);
             SetupReplacements.Add("$AdminEmail$", AdminUserEmailTextbox.Text);
-            SetupReplacements.Add("$WebsiteRoles$", "IF(NOT EXISTS(SELECT [Id] FROM [Membership].[Role] WHERE [Name] = 'Administrator')) INSERT INTO[Membership].[Role]([Name],[SystemDefault]) VALUES('Administrator', 1)");
-            SetupReplacements.Add("$WebsiteSecurityQuestions$", "IF(NOT EXISTS (SELECT [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = 'What is the first and last name of your first boyfriend or girlfriend?' AND [SystemDefault] = 1)) INSERT INTO[Membership].[SecurityQuestion]([Text],[SystemDefault]) VALUES('What is the first and last name of your first boyfriend or girlfriend?', 1)");
+            var roles = RolesListbox.Items.OfType<string>().ToArray();
+            var rolesSql = new StringBuilder();
+            foreach (var role in roles)
+            {
+                rolesSql.AppendFormat("IF(NOT EXISTS(SELECT [Id] FROM [Membership].[Role] WHERE [Name] = '{0}'))\n\t\tINSERT INTO[Membership].[Role]([Name],[SystemDefault]) VALUES('{0}', 1)\n\t",role);
+            }
+            SetupReplacements.Add("$WebsiteRoles$", rolesSql.ToString());
+            var securityQuestions = SecurityQuestionListbox.Items.OfType<string>().ToArray();
+            var securityQuestionsSql = new StringBuilder();
+            foreach (var securityQuestion in securityQuestions)
+            {
+                securityQuestionsSql.AppendFormat("IF(NOT EXISTS (SELECT [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = '{0}' AND [SystemDefault] = 1))\n\t\tINSERT INTO[Membership].[SecurityQuestion]([Text],[SystemDefault]) VALUES('{0}', 1)\n\t", securityQuestion);
+            }
+            SetupReplacements.Add("$WebsiteSecurityQuestions$", securityQuestionsSql.ToString());
         }
 
         private bool ValidateInputs()

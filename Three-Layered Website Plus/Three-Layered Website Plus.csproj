@@ -147,7 +147,9 @@
   <!--Data layer-->
   <ItemGroup>
     <VSTemplate Include="DataLayer\DataLayer.vstemplate" />
-    <None Include="DataLayer\ProjectTemplate.csproj" />
+    <None Include="DataLayer\ProjectTemplate.csproj">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DataLayer\Properties\AssemblyInfo.cs" />
     <None Include="DataLayer\App.Config" />
     <None Include="DataLayer\packages.config" />
@@ -166,10 +168,14 @@
     <None Include="SecurityLayer\Providers\RoleManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="DatabaseLayer\DatabaseLayer.vstemplate" />
+    <VSTemplate Include="DatabaseLayer\DatabaseLayer.vstemplate">
+      <SubType>Designer</SubType>
+    </VSTemplate>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DatabaseLayer\ProjectTemplate.sqlproj" />
+    <None Include="DatabaseLayer\ProjectTemplate.sqlproj">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="DatabaseLayer\Data\AddAdmin.sql" />

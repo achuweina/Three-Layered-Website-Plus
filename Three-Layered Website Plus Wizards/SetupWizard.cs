@@ -19,7 +19,6 @@ namespace Three_Layered_Website_Plus_Wizards
             }
             foreach (var setupWizSetupReplacement in setupWiz.SetupReplacements)
             {
-                MessageBox.Show(setupWizSetupReplacement.Key + ": " + setupWizSetupReplacement.Value);
                 replacementsDictionary.Add(setupWizSetupReplacement.Key,setupWizSetupReplacement.Value);
             }
         }
@@ -47,7 +46,7 @@ namespace Three_Layered_Website_Plus_Wizards
 
         public void RunFinished()
         {
-
+            
         }
     }
 }

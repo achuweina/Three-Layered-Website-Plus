@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -191,8 +192,11 @@ namespace Three_Layered_Website_Plus_Wizards
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            if (TestConnection())
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void Cancel_Button_Click(object sender, EventArgs e)
@@ -204,6 +208,36 @@ namespace Three_Layered_Website_Plus_Wizards
         public string ConnectionString()
         {
             return _connectionString.ToString();
+        }
+
+        private bool TestConnection()
+        {
+            var initialCatalog = _connectionString.InitialCatalog;
+            try
+            {
+                _connectionString.InitialCatalog = null;
+                SqlConnection testConnection = new SqlConnection(_connectionString.ConnectionString);
+                testConnection.Open();
+                testConnection.Close();
+                testConnection.Dispose();
+                _connectionString.InitialCatalog = initialCatalog;
+                MessageBox.Show("Connection was successful","SQL connection",MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly,false);
+                return true;
+            }
+            catch (InvalidOperationException exception)
+            {
+                MessageBox.Show(exception.Message + "\nPlease report this to the extension publisher.", "Operation Issues", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
+                return false;
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.Message, "Connection Issues", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
+                return false;
+            }
+            finally
+            {
+                _connectionString.InitialCatalog = initialCatalog;
+            }
         }
 
     }
