@@ -3,7 +3,8 @@ A Visual Studio template for the three layered website and cross cutting setup
 
 ## Release
 [v1.0.0.0](/Release%20Notes.md#v1000) - First public version of the template
-[v1.1.0.0](/Release%20Notes.md#v1100) - First public version of the template
+
+[v1.1.0.0](/Release%20Notes.md#v1100) - Wizard and localization
 
 ## Road map
 - Add Unit Test projects
