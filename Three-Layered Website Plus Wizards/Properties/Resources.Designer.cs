@@ -134,6 +134,15 @@ namespace Three_Layered_Website_Plus_Wizards.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unexpected exception.
+        /// </summary>
+        internal static string ConnectionStringSetupForm_UnexpectedException {
+            get {
+                return ResourceManager.GetString("ConnectionStringSetupForm_UnexpectedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This is already a role in the list.
         ///Do you wish to create a duplicate?.
         /// </summary>

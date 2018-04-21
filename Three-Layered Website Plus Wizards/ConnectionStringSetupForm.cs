@@ -212,33 +212,64 @@ namespace Three_Layered_Website_Plus_Wizards
 
         private bool TestConnection()
         {
+            var testResult = false;
             var initialCatalog = _connectionString.InitialCatalog;
             try
             {
-                _connectionString.InitialCatalog = null;
-                SqlConnection testConnection = new SqlConnection(_connectionString.ConnectionString);
-                testConnection.Open();
-                testConnection.Close();
-                testConnection.Dispose();
+                _connectionString.InitialCatalog = string.Empty;
+                var connectionTask = Task.Run(() => OpenCloseConnection());
+                connectionTask.Wait(500);
+                if (connectionTask.Status == TaskStatus.Faulted)
+                {
+                    if (connectionTask.Exception != null)
+                    {
+                        throw connectionTask.Exception;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("The task to test the connection failed but no exception was thrown");
+                    }
+                }
                 _connectionString.InitialCatalog = initialCatalog;
-                MessageBox.Show(Resources.ConnectionStringSetupForm_TestConnection_Successful,Resources.ConnectionStringSetupForm_TestConnection_Successful_Title,MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly,false);
-                return true;
+                MessageBox.Show(Resources.ConnectionStringSetupForm_TestConnection_Successful,
+                    Resources.ConnectionStringSetupForm_TestConnection_Successful_Title, MessageBoxButtons.OK,
+                    MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly,
+                    false);
+                testResult = true;
             }
             catch (InvalidOperationException exception)
             {
-                MessageBox.Show(exception.HResult + Resources.ExceptionCodeMessageSeperator + exception.Message + Resources.ConnectionStringSetupForm_TestConnection_InvalidOperationException, Resources.ConnectionStringSetupForm_TestConnection_InvalidOperationException_Title, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
-                return false;
+                MessageBox.Show(
+                    exception.HResult + Resources.ExceptionCodeMessageSeperator + exception.Message +
+                    Resources.ConnectionStringSetupForm_TestConnection_InvalidOperationException,
+                    Resources.ConnectionStringSetupForm_TestConnection_InvalidOperationException_Title,
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly, false);
             }
             catch (SqlException exception)
             {
-                MessageBox.Show(exception.HResult + Resources.ExceptionCodeMessageSeperator + exception.Message, Resources.ConnectionStringSetupForm_ConnectionIssues, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
-                return false;
+                MessageBox.Show(exception.HResult + Resources.ExceptionCodeMessageSeperator + exception.Message,
+                    Resources.ConnectionStringSetupForm_ConnectionIssues, MessageBoxButtons.OK, MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, Resources.ConnectionStringSetupForm_UnexpectedException, MessageBoxButtons.OK, MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
             }
             finally
             {
                 _connectionString.InitialCatalog = initialCatalog;
             }
+            return testResult;
         }
 
+        private void OpenCloseConnection()
+        {
+            SqlConnection testConnection = new SqlConnection(_connectionString.ConnectionString);
+            testConnection.Open();
+            testConnection.Close();
+            testConnection.Dispose();
+        }
     }
 }

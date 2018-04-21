@@ -1,17 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Web.Security;
+using $safeprojectname$.CustomAttributes;
+using $safeprojectname$.Properties;
 
 namespace $safeprojectname$.Models.User
 {
     public class Login
     {
-        [Required(ErrorMessage = "No username was provided.")]
-        [MaxLength(30,ErrorMessage = "Username is to long.")]
+        [Required(ErrorMessageResourceType = typeof(Resource),ErrorMessageResourceName = "Login_Username_Required")]
+        [MaxLength(30, ErrorMessageResourceType = typeof(Resource), ErrorMessageResourceName = "Login_Username_MaxLength")]
+        [DisplayNameLocalizable("Login_Username_Label", typeof(Resource))]
         public string Username { get; set; }
 
-        [Required(ErrorMessage = "No password was provided.")]
+        [Required(ErrorMessageResourceType = typeof(Resource), ErrorMessageResourceName = "Login_Password_Required")]
+        [DisplayNameLocalizable("Login_Password_Label", typeof(Resource))]
         public string Password { get; set; }
 
+        [DisplayNameLocalizable("Login_KeepLoggedIn_Label", typeof(Resource))]
         public bool KeepLoggedIn { get; set; }
 
     }

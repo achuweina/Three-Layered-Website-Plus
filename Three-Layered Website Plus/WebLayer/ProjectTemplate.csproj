@@ -92,6 +92,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Content Include="favicon.ico"/>
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -109,6 +118,7 @@
     <Compile Include="Controllers\HomeController.cs"/>
     <Compile Include="Controllers\UserController.cs"/>
     <Content Include="CustomErrors\Error.aspx"/>
+    <Compile Include="CustomAttributes\LocalizedDisplayNameAttribute.cs"/>
     <Compile Include="Models\User\Login.cs"/>
     <Content Include="Views\_ViewStart.cshtml"/>
     <Content Include="Views\Web.config"/>
