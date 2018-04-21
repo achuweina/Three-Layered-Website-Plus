@@ -249,12 +249,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.edmx</DependentUpon>
     </Compile>
-    <None Include="WebLayer\CustomAttributes\LocalizedDisplayNameAttribute.cs" />
-    <None Include="WebLayer\Properties\Resource.Designer.cs">
+    <Compile Include="WebLayer\Properties\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
-    </None>
+    </Compile>
+    <None Include="WebLayer\CustomAttributes\LocalizedDisplayNameAttribute.cs" />
     <None Include="WebLayer\Models\User\Login.cs" />
     <None Include="WebLayer\Controllers\UserController.cs" />
   </ItemGroup>
@@ -263,9 +263,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="WebLayer\Properties\Resource.resx">
+      <SubType>Designer</SubType>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+      <CustomToolNamespace>%24safeprojectname%24.Properties</CustomToolNamespace>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

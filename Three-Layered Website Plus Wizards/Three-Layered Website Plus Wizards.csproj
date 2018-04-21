@@ -74,6 +74,7 @@
     <Compile Include="SetupWizardForm.Designer.cs">
       <DependentUpon>SetupWizardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringExtentions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
