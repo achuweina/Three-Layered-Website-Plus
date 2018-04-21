@@ -3,14 +3,14 @@ A Visual Studio template for the three layered website and cross cutting setup
 
 ## Release
 [v1.0.0.0](/Release%20Notes.md#v1000) - First public version of the template
+[v1.1.0.0](/Release%20Notes.md#v1100) - First public version of the template
 
 ## Road map
-- Add a wizard to allow input configuration
-- Add localization for template where needed
 - Add Unit Test projects
 - Add Coded UI test projects
 - Add code first option for data layer (this is mean the data tools project will not be deployed)
 - Allow different authentication modes
+- Allow naming of database in Wizard
 
 If you would like to add to the road map please create a pull request and update the road map (see rules on creating a pull request)
 

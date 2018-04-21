@@ -22,4 +22,8 @@
       <ProjectTemplateLink ProjectName="$projectname$.Security" CopyParameters="true">SecurityLayer\SecurityLayer.vstemplate</ProjectTemplateLink>
     </ProjectCollection>
   </TemplateContent>
+  <WizardExtension>
+    <Assembly>Three-Layered Website Plus Wizards, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=e6046137a1c99003</Assembly>
+    <FullClassName>Three_Layered_Website_Plus_Wizards.SetupWizard</FullClassName>
+  </WizardExtension>
 </VSTemplate>

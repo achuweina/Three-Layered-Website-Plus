@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
 using $safeprojectname$.Models.User;
+using $safeprojectname$.Properties;
 
 namespace $safeprojectname$.Controllers
 {
@@ -18,7 +19,7 @@ namespace $safeprojectname$.Controllers
             if(!ModelState.IsValid) return View(details);
             if (!Membership.ValidateUser(details.Username, details.Password))
             {
-                ModelState.AddModelError("Validation","The username and password are invalid to login.");
+                ModelState.AddModelError("Validation",Resource.Login_Userdetails_Invalid);
                 return View(details);
             }
             FormsAuthentication.RedirectFromLoginPage(details.Username, details.KeepLoggedIn, FormsAuthentication.FormsCookiePath);
