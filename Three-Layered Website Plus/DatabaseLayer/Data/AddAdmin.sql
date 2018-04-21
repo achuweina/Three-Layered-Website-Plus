@@ -1,6 +1,6 @@
 ﻿IF (EXISTS (SELECT [TABLE_CATALOG] FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'Membership' AND TABLE_NAME = 'User'))
 BEGIN
-	IF (NOT EXISTS(SELECT [Id] FROM [Membership].[UserDetails] WHERE [Username] = 'Admin'))
+	IF (NOT EXISTS(SELECT [Id] FROM [Membership].[UserDetails] WHERE [Username] = '$ext_AdminUsername$'))
 	BEGIN
 		DECLARE @AdminUserId INT
 		DECLARE @AdminRoleId INT
@@ -10,30 +10,29 @@ BEGIN
 		DECLARE @UserSecurityQuestionAndAnswerId INT
 		DECLARE @SecurityQuestionId INT
 
-		IF (NOT EXISTS(SELECT [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = 'Which is your favorite web browser?'))
+		IF (NOT EXISTS(SELECT [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = '$ext_AdminQuestion$'))
 		BEGIN
 			INSERT INTO [Membership].[SecurityQuestion]
 			([Text],[SystemDefault])
 			VALUES
-			('Which is your favorite web browser?',0)
+			('$ext_AdminQuestion$',0)
 			SET @SecurityQuestionId = @@IDENTITY
 		END
 		ELSE
 		BEGIN
-			SELECT @SecurityQuestionId = [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = 'Which is your favorite web browser?'
+			SELECT @SecurityQuestionId = [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = '$ext_AdminQuestion$'
 		END
 
 		INSERT INTO [Membership].[UserSecurityQuestionAndAnswer]
 		([QuestionId],[Answer])
 		VALUES
-		(@SecurityQuestionId,'')
+		(@SecurityQuestionId,'$ext_AdminAnswer$')
 		SET @UserSecurityQuestionAndAnswerId = @@IDENTITY
 
-		--Admin password Admin1234
 		INSERT INTO [Membership].[UserAndPassword]
 		([Password],[LastChanged])
 		VALUES
-		('$2a$05$ViiCeg9QFXDyOUzTFqHKI.SkpD7pSiqxOjDNybJ/DJ51aGhJRB.4K',GETDATE())
+		('$ext_AdminPassword$',GETDATE())
 		SET @UserAndPasswordId = @@IDENTITY
 		
 		INSERT INTO [Membership].[UserActivity]
@@ -45,7 +44,7 @@ BEGIN
 		INSERT INTO [Membership].[UserDetails]
 		([Username],[Email],[Comment])
 		VALUES
-		('Admin','admin@website18.com','')
+		('$ext_AdminUsername$','$ext_AdminEmail$','')
 		SET @UserDetailsId = @@IDENTITY
 
 		SELECT @AdminRoleId = [Id] FROM [Membership].[Role] WHERE [Name] = 'Administrator'
