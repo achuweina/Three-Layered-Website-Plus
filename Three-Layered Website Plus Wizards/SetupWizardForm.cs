@@ -38,24 +38,24 @@ namespace Three_Layered_Website_Plus_Wizards
             SetupReplacements.Add("$Copyright$",CopyrightTextbox.Text);
             SetupReplacements.Add("$HTTPS$",HTTPSCheckbox.Checked.ToString().ToLower());
             SetupReplacements.Add("$ConnectionString$",ConnectionStringTextbox.Text);
-            SetupReplacements.Add("$AdminUsername$",AdminUserUsernameTextbox.Text);
+            SetupReplacements.Add("$AdminUsername$", AdminUserUsernameTextbox.Text.EscapeForSql());
             var adminPassword = BCryptHelper.HashPassword(AdminUserPasswordTextbox.Text, BCryptHelper.GenerateSalt(5));
-            SetupReplacements.Add("$AdminPassword$", adminPassword);
-            SetupReplacements.Add("$AdminQuestion$", AdminUserSecurityQuestionTextbox.Text);
-            SetupReplacements.Add("$AdminAnswer$", AdminUserAnswerTextbox.Text);
-            SetupReplacements.Add("$AdminEmail$", AdminUserEmailTextbox.Text);
+            SetupReplacements.Add("$AdminPassword$", adminPassword.EscapeForSql());
+            SetupReplacements.Add("$AdminQuestion$", AdminUserSecurityQuestionTextbox.Text.EscapeForSql());
+            SetupReplacements.Add("$AdminAnswer$", AdminUserAnswerTextbox.Text.EscapeForSql());
+            SetupReplacements.Add("$AdminEmail$", AdminUserEmailTextbox.Text.EscapeForSql());
             var roles = RolesListbox.Items.OfType<string>().ToArray();
             var rolesSql = new StringBuilder();
             foreach (var role in roles)
             {
-                rolesSql.AppendFormat("IF(NOT EXISTS(SELECT [Id] FROM [Membership].[Role] WHERE [Name] = '{0}'))\n\t\tINSERT INTO[Membership].[Role]([Name],[SystemDefault]) VALUES('{0}', 1)\n\t",role);
+                rolesSql.AppendFormat("IF(NOT EXISTS(SELECT [Id] FROM [Membership].[Role] WHERE [Name] = '{0}'))\n\t\tINSERT INTO[Membership].[Role]([Name],[SystemDefault]) VALUES('{0}', 1)\n\t",role.EscapeForSql());
             }
             SetupReplacements.Add("$WebsiteRoles$", rolesSql.ToString());
             var securityQuestions = SecurityQuestionListbox.Items.OfType<string>().ToArray();
             var securityQuestionsSql = new StringBuilder();
             foreach (var securityQuestion in securityQuestions)
             {
-                securityQuestionsSql.AppendFormat("IF(NOT EXISTS (SELECT [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = '{0}' AND [SystemDefault] = 1))\n\t\tINSERT INTO[Membership].[SecurityQuestion]([Text],[SystemDefault]) VALUES('{0}', 1)\n\t", securityQuestion);
+                securityQuestionsSql.AppendFormat("IF(NOT EXISTS (SELECT [Id] FROM [Membership].[SecurityQuestion] WHERE [Text] = '{0}' AND [SystemDefault] = 1))\n\t\tINSERT INTO[Membership].[SecurityQuestion]([Text],[SystemDefault]) VALUES('{0}', 1)\n\t", securityQuestion.EscapeForSql());
             }
             SetupReplacements.Add("$WebsiteSecurityQuestions$", securityQuestionsSql.ToString());
         }
