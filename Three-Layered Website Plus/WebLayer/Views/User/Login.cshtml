@@ -1,4 +1,4 @@
-﻿@using $safeprojectname$.Properties;
+﻿@using$safeprojectname$.Properties;
 @model $safeprojectname$.Models.User.Login
 <h2>@Resource.Login_Title</h2>
 @using (Html.BeginForm())
@@ -6,7 +6,7 @@
     @Html.AntiForgeryToken()
 
     @Html.ValidationMessage("Validation")
-
+    <br />
     @Html.LabelFor(x => x.Username)
     <br />
     @Html.ValidationMessageFor(x => x.Username) <br />

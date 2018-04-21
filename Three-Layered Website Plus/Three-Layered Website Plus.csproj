@@ -234,11 +234,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataLayer\ProjectTemplate.Context.cs">
+    <None Include="DataLayer\ProjectTemplate.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.Context.tt</DependentUpon>
-    </Compile>
+    </None>
     <Compile Include="DataLayer\ProjectTemplate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -63,6 +63,9 @@
     <None Include="$ext_safeprojectname$.edmx.diagram">
       <DependentUpon>$ext_safeprojectname$.edmx</DependentUpon>
     </None>
+    <Compile Include="UserToRole.cs">
+      <DependentUpon>$ext_safeprojectname$.tt</DependentUpon>
+    </Compile>
     <Compile Include="$ext_safeprojectname$.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

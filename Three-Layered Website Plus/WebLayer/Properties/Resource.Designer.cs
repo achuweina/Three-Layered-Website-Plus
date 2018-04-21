@@ -187,6 +187,24 @@ namespace $safeprojectname$.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string WebsiteHomeLinkText {
+            get {
+                return ResourceManager.GetString("WebsiteHomeLinkText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string WebsiteLoginLinkText {
+            get {
+                return ResourceManager.GetString("WebsiteLoginLinkText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to $ext_WebTitle$.
         /// </summary>
         public static string WebsiteTitle {

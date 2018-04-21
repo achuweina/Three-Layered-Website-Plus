@@ -8,7 +8,8 @@
 <body>
     <header>@Resource.WebsiteTitle</header>
     <nav>
-        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink(Resource.WebsiteHomeLinkText, "Index", "Home")
+        @Html.ActionLink(Resource.WebsiteLoginLinkText, "Login", "User")
     </nav>
     <main>
         @RenderBody()

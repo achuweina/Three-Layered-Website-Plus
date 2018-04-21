@@ -159,6 +159,12 @@
   <data name="WebsiteCopyright" xml:space="preserve">
     <value>$ext_Copyright$</value>
   </data>
+  <data name="WebsiteHomeLinkText" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="WebsiteLoginLinkText" xml:space="preserve">
+    <value>Login</value>
+  </data>
   <data name="WebsiteTitle" xml:space="preserve">
     <value>$ext_WebTitle$</value>
   </data>
