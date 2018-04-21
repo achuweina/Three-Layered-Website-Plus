@@ -249,11 +249,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.edmx</DependentUpon>
     </Compile>
-    <Compile Include="WebLayer\Properties\Resource.Designer.cs">
+    <None Include="WebLayer\Properties\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
+    </None>
     <None Include="WebLayer\CustomAttributes\LocalizedDisplayNameAttribute.cs" />
     <None Include="WebLayer\Models\User\Login.cs" />
     <None Include="WebLayer\Controllers\UserController.cs" />
