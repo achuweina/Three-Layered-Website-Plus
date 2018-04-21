@@ -249,11 +249,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.edmx</DependentUpon>
     </Compile>
+    <None Include="WebLayer\Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </None>
+    <None Include="WebLayer\CustomAttributes\LocalizedDisplayNameAttribute.cs" />
     <None Include="WebLayer\Models\User\Login.cs" />
     <None Include="WebLayer\Controllers\UserController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Release Notes.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebLayer\Properties\Resource.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>%24safeprojectname%24.Properties</CustomToolNamespace>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@using $safeprojectname$.Properties;
+<!DOCTYPE html>
 <html>
 <head>
-    <title>$ext_WebTitle$</title>
+    <title>@Resource.WebsiteTitle</title>
     <link type="text/css" rel="stylesheet" href="/Content/Site.css" />
 </head>
 <body>
-    <header>$ext_WebTitle$</header>
+    <header>@Resource.WebsiteTitle</header>
     <nav>
         @Html.ActionLink("Home", "Index", "Home")
     </nav>
@@ -13,7 +14,7 @@
         @RenderBody()
     </main>
     <footer>
-        &copy; @DateTime.Now.Year - $ext_Copyright$
+        &copy; @DateTime.Now.Year - @Resource.WebsiteCopyright
     </footer>
 </body>
 </html>

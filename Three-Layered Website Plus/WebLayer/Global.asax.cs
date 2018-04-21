@@ -1,4 +1,7 @@
-﻿using System.Web;
+﻿using System.Globalization;
+using System.Linq;
+using System.Threading;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using $ext_safeprojectname$.Common.IOC;
@@ -22,5 +25,14 @@ namespace $safeprojectname$
             $if$ ($ext_HTTPS$ == true)Response.Headers.Add("Strict-Transport-Security", "max-age=31536000");
             $endif$
         }
+
+        protected void Application_BeginRequest()
+        {
+            var languages = Request.UserLanguages?.FirstOrDefault();
+            if (languages == null) return;
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(languages);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(languages);
+        }
+
     }
 }

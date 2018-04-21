@@ -117,35 +117,1075 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="WebsiteTitleTextboxToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WebsiteTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="WebsiteTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 22</value>
+  </data>
+  <data name="WebsiteTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="WebsiteTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="WebsiteTitleLabel.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleLabel.Name" xml:space="preserve">
+    <value>WebsiteTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleLabel.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WebsiteTitleTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="WebsiteTitleTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 38</value>
+  </data>
+  <data name="WebsiteTitleTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 20</value>
+  </data>
+  <data name="WebsiteTitleTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <metadata name="AdminUserTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>549, 17</value>
   </metadata>
   <data name="WebsiteTitleTextbox.ToolTip" xml:space="preserve">
     <value>This should be the title you wan't to show in the website and in the title bar of the browser when your site is deployed.
 This can be empty and result in no text been put into the site where this text would be put.</value>
   </data>
+  <metadata name="WebsiteTitleTextboxToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="WebsiteTitleTextbox.ToolTip1" xml:space="preserve">
+    <value>This should be the title you wan't to show in the website and in the title bar of the browser when your site is deployed.
+This can be empty and result in no text been put into the site where this text would be put.</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleTextbox.Name" xml:space="preserve">
+    <value>WebsiteTitleTextbox</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleTextbox.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="CopyrightLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CopyrightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 61</value>
+  </data>
+  <data name="CopyrightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="CopyrightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="CopyrightLabel.Text" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="&gt;&gt;CopyrightLabel.Name" xml:space="preserve">
+    <value>CopyrightLabel</value>
+  </data>
+  <data name="&gt;&gt;CopyrightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CopyrightLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CopyrightLabel.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="CopyrightTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="CopyrightTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 77</value>
+  </data>
+  <data name="CopyrightTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 20</value>
+  </data>
+  <data name="CopyrightTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CopyrightTextbox.ToolTip" xml:space="preserve">
+    <value>The text put in here will show at the bottom of the website in the footer.
+This can be empty but this will lead to "© [This current year] - " been put in the footer.</value>
+  </data>
   <metadata name="WebsiteCopyrightTextboxToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>219, 17</value>
   </metadata>
-  <metadata name="HTTPSCheckboxTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>452, 17</value>
-  </metadata>
+  <data name="CopyrightTextbox.ToolTip1" xml:space="preserve">
+    <value>The text put in here will show at the bottom of the website in the footer.
+This can be empty but this will lead to "© [This current year] - " been put in the footer.</value>
+  </data>
+  <data name="&gt;&gt;CopyrightTextbox.Name" xml:space="preserve">
+    <value>CopyrightTextbox</value>
+  </data>
+  <data name="&gt;&gt;CopyrightTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CopyrightTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CopyrightTextbox.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="HTTPSCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="HTTPSCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 103</value>
+  </data>
+  <data name="HTTPSCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 17</value>
+  </data>
+  <data name="HTTPSCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="HTTPSCheckbox.Text" xml:space="preserve">
+    <value>HTTPS everywhere</value>
+  </data>
   <data name="HTTPSCheckbox.ToolTip" xml:space="preserve">
     <value>This should be ticked unless you are really not going to deploy a HTTPS site.
 When this is ticked the authentication cookie will require HTTPS, the RequireHttps filter will be applyed to all requests and the Strict-Transport-Security header will be added.
 When this is not ticked you will have to add all this your self if you then need it.</value>
   </data>
-  <metadata name="AdminUserTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>549, 17</value>
+  <metadata name="HTTPSCheckboxTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>452, 17</value>
   </metadata>
+  <data name="HTTPSCheckbox.ToolTip1" xml:space="preserve">
+    <value>This should be ticked unless you are really not going to deploy a HTTPS site.
+When this is ticked the authentication cookie will require HTTPS, the RequireHttps filter will be applyed to all requests and the Strict-Transport-Security header will be added.
+When this is not ticked you will have to add all this your self if you then need it.</value>
+  </data>
+  <data name="&gt;&gt;HTTPSCheckbox.Name" xml:space="preserve">
+    <value>HTTPSCheckbox</value>
+  </data>
+  <data name="&gt;&gt;HTTPSCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HTTPSCheckbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;HTTPSCheckbox.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="WebsiteSetupLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WebsiteSetupLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="WebsiteSetupLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="WebsiteSetupLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="WebsiteSetupLabel.Text" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSetupLabel.Name" xml:space="preserve">
+    <value>WebsiteSetupLabel</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSetupLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSetupLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSetupLabel.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="DatabaseSetupLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DatabaseSetupLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 123</value>
+  </data>
+  <data name="DatabaseSetupLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="DatabaseSetupLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="DatabaseSetupLabel.Text" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSetupLabel.Name" xml:space="preserve">
+    <value>DatabaseSetupLabel</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSetupLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSetupLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSetupLabel.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="ConnectionStringTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="ConnectionStringTextbox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ConnectionStringTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 152</value>
+  </data>
+  <data name="ConnectionStringTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 20</value>
+  </data>
+  <data name="ConnectionStringTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringTextbox.Name" xml:space="preserve">
+    <value>ConnectionStringTextbox</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringTextbox.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="ConnectionStringLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ConnectionStringLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 136</value>
+  </data>
+  <data name="ConnectionStringLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="ConnectionStringLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ConnectionStringLabel.Text" xml:space="preserve">
+    <value>Connection string</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringLabel.Name" xml:space="preserve">
+    <value>ConnectionStringLabel</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringLabel.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ConnectionStringSetButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="ConnectionStringSetButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 152</value>
+  </data>
+  <data name="ConnectionStringSetButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="ConnectionStringSetButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ConnectionStringSetButton.Text" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringSetButton.Name" xml:space="preserve">
+    <value>ConnectionStringSetButton</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringSetButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringSetButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConnectionStringSetButton.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="WebsiteSecurityLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WebsiteSecurityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 175</value>
+  </data>
+  <data name="WebsiteSecurityLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="WebsiteSecurityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="WebsiteSecurityLabel.Text" xml:space="preserve">
+    <value>Website security</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSecurityLabel.Name" xml:space="preserve">
+    <value>WebsiteSecurityLabel</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSecurityLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSecurityLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WebsiteSecurityLabel.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="AdminUserLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AdminUserLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 188</value>
+  </data>
+  <data name="AdminUserLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="AdminUserLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="AdminUserLabel.Text" xml:space="preserve">
+    <value>Admin user</value>
+  </data>
+  <data name="&gt;&gt;AdminUserLabel.Name" xml:space="preserve">
+    <value>AdminUserLabel</value>
+  </data>
+  <data name="&gt;&gt;AdminUserLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserLabel.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="AdminUserUsernameTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="AdminUserUsernameTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 217</value>
+  </data>
+  <data name="AdminUserUsernameTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 20</value>
+  </data>
+  <data name="AdminUserUsernameTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
   <data name="AdminUserUsernameTextbox.ToolTip" xml:space="preserve">
     <value>The username that the admin user will use to login to the website.
 Tipically you will need an admin user to manage users and other aspects of your system if not just to create the first real user.
 You should have a username that is not easy to guess so it is not advised to have this be Admin, Administrator or any thing easy to work out.</value>
   </data>
+  <data name="&gt;&gt;AdminUserUsernameTextbox.Name" xml:space="preserve">
+    <value>AdminUserUsernameTextbox</value>
+  </data>
+  <data name="&gt;&gt;AdminUserUsernameTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserUsernameTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserUsernameTextbox.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="AdminUserUsernameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AdminUserUsernameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 201</value>
+  </data>
+  <data name="AdminUserUsernameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="AdminUserUsernameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="AdminUserUsernameLabel.Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="&gt;&gt;AdminUserUsernameLabel.Name" xml:space="preserve">
+    <value>AdminUserUsernameLabel</value>
+  </data>
+  <data name="&gt;&gt;AdminUserUsernameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserUsernameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserUsernameLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="AdminUserPasswordTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="AdminUserPasswordTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 256</value>
+  </data>
+  <data name="AdminUserPasswordTextbox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="AdminUserPasswordTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 20</value>
+  </data>
+  <data name="AdminUserPasswordTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
   <data name="AdminUserPasswordTextbox.ToolTip" xml:space="preserve">
     <value>The password that the admin user will use to login to the website.
 As the admin user is likly to have the highest level of permissions this should be complex and difficult to guess.
 This can be empty but this really should not be done.</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordTextbox.Name" xml:space="preserve">
+    <value>AdminUserPasswordTextbox</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordTextbox.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="AdminUserPasswordLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AdminUserPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 240</value>
+  </data>
+  <data name="AdminUserPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="AdminUserPasswordLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="AdminUserPasswordLabel.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordLabel.Name" xml:space="preserve">
+    <value>AdminUserPasswordLabel</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserPasswordLabel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="AdminUserSecurityQuestionTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="AdminUserSecurityQuestionTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 295</value>
+  </data>
+  <data name="AdminUserSecurityQuestionTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 20</value>
+  </data>
+  <data name="AdminUserSecurityQuestionTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="AdminUserSecurityQuestionTextbox.ToolTip" xml:space="preserve">
+    <value>The security question that the admin user will answer to reset there password for the website.</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityQuestionTextbox.Name" xml:space="preserve">
+    <value>AdminUserSecurityQuestionTextbox</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityQuestionTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityQuestionTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityQuestionTextbox.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="AdminUserSecuirtyQuestionsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AdminUserSecuirtyQuestionsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 279</value>
+  </data>
+  <data name="AdminUserSecuirtyQuestionsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="AdminUserSecuirtyQuestionsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="AdminUserSecuirtyQuestionsLabel.Text" xml:space="preserve">
+    <value>Security question</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecuirtyQuestionsLabel.Name" xml:space="preserve">
+    <value>AdminUserSecuirtyQuestionsLabel</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecuirtyQuestionsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecuirtyQuestionsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecuirtyQuestionsLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="AdminUserAnswerTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="AdminUserAnswerTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 334</value>
+  </data>
+  <data name="AdminUserAnswerTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 20</value>
+  </data>
+  <data name="AdminUserAnswerTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="AdminUserAnswerTextbox.ToolTip" xml:space="preserve">
+    <value>The answer to the security question that the admin user will answer to reset there password for the website.</value>
+  </data>
+  <data name="&gt;&gt;AdminUserAnswerTextbox.Name" xml:space="preserve">
+    <value>AdminUserAnswerTextbox</value>
+  </data>
+  <data name="&gt;&gt;AdminUserAnswerTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserAnswerTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserAnswerTextbox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="AdminUserSecurityAnswerLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AdminUserSecurityAnswerLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 318</value>
+  </data>
+  <data name="AdminUserSecurityAnswerLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="AdminUserSecurityAnswerLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="AdminUserSecurityAnswerLabel.Text" xml:space="preserve">
+    <value>Security answer</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityAnswerLabel.Name" xml:space="preserve">
+    <value>AdminUserSecurityAnswerLabel</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityAnswerLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityAnswerLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserSecurityAnswerLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="AdminUserEmailTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="AdminUserEmailTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 373</value>
+  </data>
+  <data name="AdminUserEmailTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 20</value>
+  </data>
+  <data name="AdminUserEmailTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="AdminUserEmailTextbox.ToolTip" xml:space="preserve">
+    <value>The email for the admin user that a password reset will be sent to by the website.</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailTextbox.Name" xml:space="preserve">
+    <value>AdminUserEmailTextbox</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailTextbox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="AdminUserEmailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AdminUserEmailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 357</value>
+  </data>
+  <data name="AdminUserEmailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="AdminUserEmailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="AdminUserEmailLabel.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailLabel.Name" xml:space="preserve">
+    <value>AdminUserEmailLabel</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdminUserEmailLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="RolesLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RolesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 396</value>
+  </data>
+  <data name="RolesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="RolesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="RolesLabel.Text" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="&gt;&gt;RolesLabel.Name" xml:space="preserve">
+    <value>RolesLabel</value>
+  </data>
+  <data name="&gt;&gt;RolesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RolesLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RolesLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="RolesListbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RolesListbox.Items" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="RolesListbox.Items1" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="RolesListbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 412</value>
+  </data>
+  <data name="RolesListbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 69</value>
+  </data>
+  <data name="RolesListbox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;RolesListbox.Name" xml:space="preserve">
+    <value>RolesListbox</value>
+  </data>
+  <data name="&gt;&gt;RolesListbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RolesListbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RolesListbox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="RoleAddButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RoleAddButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 487</value>
+  </data>
+  <data name="RoleAddButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="RoleAddButton.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="RoleAddButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;RoleAddButton.Name" xml:space="preserve">
+    <value>RoleAddButton</value>
+  </data>
+  <data name="&gt;&gt;RoleAddButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RoleAddButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RoleAddButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="RemoveRoleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RemoveRoleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 487</value>
+  </data>
+  <data name="RemoveRoleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="RemoveRoleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="RemoveRoleButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;RemoveRoleButton.Name" xml:space="preserve">
+    <value>RemoveRoleButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveRoleButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveRoleButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RemoveRoleButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RoleNameTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="RoleNameTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 489</value>
+  </data>
+  <data name="RoleNameTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="RoleNameTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;RoleNameTextbox.Name" xml:space="preserve">
+    <value>RoleNameTextbox</value>
+  </data>
+  <data name="&gt;&gt;RoleNameTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RoleNameTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RoleNameTextbox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="SecurityQuestionTextTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="SecurityQuestionTextTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 605</value>
+  </data>
+  <data name="SecurityQuestionTextTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="SecurityQuestionTextTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionTextTextbox.Name" xml:space="preserve">
+    <value>SecurityQuestionTextTextbox</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionTextTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionTextTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionTextTextbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RemoveSecurityQuestionButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="RemoveSecurityQuestionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 603</value>
+  </data>
+  <data name="RemoveSecurityQuestionButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="RemoveSecurityQuestionButton.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="RemoveSecurityQuestionButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;RemoveSecurityQuestionButton.Name" xml:space="preserve">
+    <value>RemoveSecurityQuestionButton</value>
+  </data>
+  <data name="&gt;&gt;RemoveSecurityQuestionButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RemoveSecurityQuestionButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RemoveSecurityQuestionButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AddSecurityQuestionButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="AddSecurityQuestionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 603</value>
+  </data>
+  <data name="AddSecurityQuestionButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="AddSecurityQuestionButton.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="AddSecurityQuestionButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;AddSecurityQuestionButton.Name" xml:space="preserve">
+    <value>AddSecurityQuestionButton</value>
+  </data>
+  <data name="&gt;&gt;AddSecurityQuestionButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddSecurityQuestionButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AddSecurityQuestionButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SecurityQuestionListbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items" xml:space="preserve">
+    <value>What is the first and last name of your first boyfriend or girlfriend?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items1" xml:space="preserve">
+    <value>Which phone number do you remember most from your childhood?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items2" xml:space="preserve">
+    <value>What was your favorite place to visit as a child?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items3" xml:space="preserve">
+    <value>Who is your favorite actor, musician, or artist?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items4" xml:space="preserve">
+    <value>What is the name of your favorite pet?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items5" xml:space="preserve">
+    <value>In what city were you born?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items6" xml:space="preserve">
+    <value>What high school did you attend?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items7" xml:space="preserve">
+    <value>What is your mother's maiden name?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items8" xml:space="preserve">
+    <value>What street did you grow up on?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items9" xml:space="preserve">
+    <value>What was the make of your first car?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items10" xml:space="preserve">
+    <value>When is your anniversary?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items11" xml:space="preserve">
+    <value>What is your favorite color?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items12" xml:space="preserve">
+    <value>What is your father's middle name?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items13" xml:space="preserve">
+    <value>What is the name of your first grade teacher?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items14" xml:space="preserve">
+    <value>What was your high school mascot?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Items15" xml:space="preserve">
+    <value>Which is your favorite web browser?</value>
+  </data>
+  <data name="SecurityQuestionListbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 528</value>
+  </data>
+  <data name="SecurityQuestionListbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 69</value>
+  </data>
+  <data name="SecurityQuestionListbox.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionListbox.Name" xml:space="preserve">
+    <value>SecurityQuestionListbox</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionListbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionListbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionListbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SecurityQuestionsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SecurityQuestionsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 512</value>
+  </data>
+  <data name="SecurityQuestionsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 13</value>
+  </data>
+  <data name="SecurityQuestionsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="SecurityQuestionsLabel.Text" xml:space="preserve">
+    <value>Security questions</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionsLabel.Name" xml:space="preserve">
+    <value>SecurityQuestionsLabel</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SecurityQuestionsLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="SetupWizardFormCancelButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="SetupWizardFormCancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>218, 0</value>
+  </data>
+  <data name="SetupWizardFormCancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 25</value>
+  </data>
+  <data name="SetupWizardFormCancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="SetupWizardFormCancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormCancelButton.Name" xml:space="preserve">
+    <value>SetupWizardFormCancelButton</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormCancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormCancelButton.Parent" xml:space="preserve">
+    <value>SetupWizardControlsPanel</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormCancelButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SetupWizardFormOkButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="SetupWizardFormOkButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 0</value>
+  </data>
+  <data name="SetupWizardFormOkButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 25</value>
+  </data>
+  <data name="SetupWizardFormOkButton.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="SetupWizardFormOkButton.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormOkButton.Name" xml:space="preserve">
+    <value>SetupWizardFormOkButton</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormOkButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormOkButton.Parent" xml:space="preserve">
+    <value>SetupWizardControlsPanel</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardFormOkButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SetupWizardControlsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="SetupWizardControlsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 633</value>
+  </data>
+  <data name="SetupWizardControlsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 27</value>
+  </data>
+  <data name="SetupWizardControlsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardControlsPanel.Name" xml:space="preserve">
+    <value>SetupWizardControlsPanel</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardControlsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardControlsPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SetupWizardControlsPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>284, 660</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleTextboxToolTip.Name" xml:space="preserve">
+    <value>WebsiteTitleTextboxToolTip</value>
+  </data>
+  <data name="&gt;&gt;WebsiteTitleTextboxToolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WebsiteCopyrightTextboxToolTip.Name" xml:space="preserve">
+    <value>WebsiteCopyrightTextboxToolTip</value>
+  </data>
+  <data name="&gt;&gt;WebsiteCopyrightTextboxToolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HTTPSCheckboxTooltip.Name" xml:space="preserve">
+    <value>HTTPSCheckboxTooltip</value>
+  </data>
+  <data name="&gt;&gt;HTTPSCheckboxTooltip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdminUserTooltip.Name" xml:space="preserve">
+    <value>AdminUserTooltip</value>
+  </data>
+  <data name="&gt;&gt;AdminUserTooltip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SetupWizardForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -117,52 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdminRemovalWaringText" xml:space="preserve">
-    <value>Unable to remove the admin role here as the site will need an admin so you can have at least one user.</value>
+  <data name="Account_Title" xml:space="preserve">
+    <value>Your logged in.</value>
   </data>
-  <data name="AdminRemovalWaringTitle" xml:space="preserve">
-    <value>Unable to delete!</value>
+  <data name="Home_Description" xml:space="preserve">
+    <value>This page is part of the three layer website template which is described more</value>
   </data>
-  <data name="DuplicateRoleWarningText" xml:space="preserve">
-    <value>This is already a role in the list.
-Do you wish to create a duplicate?</value>
+  <data name="Home_LinkText" xml:space="preserve">
+    <value>here</value>
   </data>
-  <data name="DuplicateRoleWarningTitle" xml:space="preserve">
-    <value>Duplicate role!</value>
+  <data name="Home_Title" xml:space="preserve">
+    <value>Welcome</value>
   </data>
-  <data name="HTTPSUncheckedWarning" xml:space="preserve">
-    <value>You have unchecked the HTTPS everywhere checkbox, this puts you and your users at risk.
-Are you sure you want to create a website without HTTPS turned on?</value>
+  <data name="Login_KeepLoggedIn_Label" xml:space="preserve">
+    <value>Keep Logged In</value>
   </data>
-  <data name="HTTPSUncheckedWarningTitle" xml:space="preserve">
-    <value>HTTPS unchecked!</value>
+  <data name="Login_LoginButton" xml:space="preserve">
+    <value>Login</value>
   </data>
-  <data name="ConnectionStringSetupForm_Checkbox_Toggle" xml:space="preserve">
-    <value>Toggle</value>
+  <data name="Login_Password_Label" xml:space="preserve">
+    <value>Password</value>
   </data>
-  <data name="ConnectionStringSetupForm_TestConnection_Successful" xml:space="preserve">
-    <value>Connection was successful</value>
+  <data name="Login_Password_Required" xml:space="preserve">
+    <value>No password was provided.</value>
   </data>
-  <data name="ConnectionStringSetupForm_TestConnection_Successful_Title" xml:space="preserve">
-    <value>SQL connection</value>
+  <data name="Login_Title" xml:space="preserve">
+    <value>Login</value>
   </data>
-  <data name="ConnectionStringSetupForm_TestConnection_InvalidOperationException" xml:space="preserve">
-    <value>
-Please report this to the extension publisher.</value>
+  <data name="Login_Userdetails_Invalid" xml:space="preserve">
+    <value>The username and password are invalid to login.</value>
   </data>
-  <data name="ConnectionStringSetupForm_TestConnection_InvalidOperationException_Title" xml:space="preserve">
-    <value>Operation Issues</value>
+  <data name="Login_Username_Label" xml:space="preserve">
+    <value>Username</value>
   </data>
-  <data name="ExceptionCodeMessageSeperator" xml:space="preserve">
-    <value>: </value>
+  <data name="Login_Username_MaxLength" xml:space="preserve">
+    <value>Username is to long.</value>
   </data>
-  <data name="ConnectionStringSetupForm_ConnectionIssues" xml:space="preserve">
-    <value>Connection Issues</value>
+  <data name="Login_Username_Required" xml:space="preserve">
+    <value>No username was provided.</value>
   </data>
-  <data name="WebsiteTitleLabel_Text" xml:space="preserve">
-    <value>Title</value>
+  <data name="WebsiteCopyright" xml:space="preserve">
+    <value>$ext_Copyright$</value>
   </data>
-  <data name="ConnectionStringSetupForm_UnexpectedException" xml:space="preserve">
-    <value>Unexpected exception</value>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>$ext_WebTitle$</value>
   </data>
 </root>
