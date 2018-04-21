@@ -79,6 +79,61 @@ namespace Three_Layered_Website_Plus_Wizards.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Toggle.
+        /// </summary>
+        internal static string ConnectionStringSetupForm_Checkbox_Toggle {
+            get {
+                return ResourceManager.GetString("ConnectionStringSetupForm_Checkbox_Toggle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connection Issues.
+        /// </summary>
+        internal static string ConnectionStringSetupForm_ConnectionIssues {
+            get {
+                return ResourceManager.GetString("ConnectionStringSetupForm_ConnectionIssues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///Please report this to the extension publisher..
+        /// </summary>
+        internal static string ConnectionStringSetupForm_TestConnection_InvalidOperationException {
+            get {
+                return ResourceManager.GetString("ConnectionStringSetupForm_TestConnection_InvalidOperationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operation Issues.
+        /// </summary>
+        internal static string ConnectionStringSetupForm_TestConnection_InvalidOperationException_Title {
+            get {
+                return ResourceManager.GetString("ConnectionStringSetupForm_TestConnection_InvalidOperationException_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connection was successful.
+        /// </summary>
+        internal static string ConnectionStringSetupForm_TestConnection_Successful {
+            get {
+                return ResourceManager.GetString("ConnectionStringSetupForm_TestConnection_Successful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQL connection.
+        /// </summary>
+        internal static string ConnectionStringSetupForm_TestConnection_Successful_Title {
+            get {
+                return ResourceManager.GetString("ConnectionStringSetupForm_TestConnection_Successful_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This is already a role in the list.
         ///Do you wish to create a duplicate?.
         /// </summary>
@@ -98,6 +153,15 @@ namespace Three_Layered_Website_Plus_Wizards.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to : .
+        /// </summary>
+        internal static string ExceptionCodeMessageSeperator {
+            get {
+                return ResourceManager.GetString("ExceptionCodeMessageSeperator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have unchecked the HTTPS everywhere checkbox, this puts you and your users at risk.
         ///Are you sure you want to create a website without HTTPS turned on?.
         /// </summary>
@@ -113,6 +177,15 @@ namespace Three_Layered_Website_Plus_Wizards.Properties {
         internal static string HTTPSUncheckedWarningTitle {
             get {
                 return ResourceManager.GetString("HTTPSUncheckedWarningTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        internal static string WebsiteTitleLabel_Text {
+            get {
+                return ResourceManager.GetString("WebsiteTitleLabel_Text", resourceCulture);
             }
         }
     }

@@ -5,10 +5,12 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Three_Layered_Website_Plus_Wizards.Properties;
 
 namespace Three_Layered_Website_Plus_Wizards
 {
@@ -63,7 +65,7 @@ namespace Three_Layered_Website_Plus_Wizards
                     {
                         Name = safeConnectionStringKey,
                         Dock = DockStyle.Top,
-                        Text = "Toggle",
+                        Text = Resources.ConnectionStringSetupForm_Checkbox_Toggle,
                         TabIndex = index,
                         Enabled = false,
                         Visible = false,
@@ -180,7 +182,7 @@ namespace Three_Layered_Website_Plus_Wizards
                 try
                 {
                     _connectionString[connectionStringKey] =
-                        enabler.Checked ? ((NumericUpDown)input).Value.ToString() : null;
+                        enabler.Checked ? ((NumericUpDown)input).Value.ToString(CultureInfo.CurrentCulture) : null;
                 }
                 catch (Exception)
                 {
@@ -192,11 +194,9 @@ namespace Three_Layered_Website_Plus_Wizards
 
         private void OK_Button_Click(object sender, EventArgs e)
         {
-            if (TestConnection())
-            {
-                DialogResult = DialogResult.OK;
-                Close();
-            }
+            if (!TestConnection()) return;
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         private void Cancel_Button_Click(object sender, EventArgs e)
@@ -221,17 +221,17 @@ namespace Three_Layered_Website_Plus_Wizards
                 testConnection.Close();
                 testConnection.Dispose();
                 _connectionString.InitialCatalog = initialCatalog;
-                MessageBox.Show("Connection was successful","SQL connection",MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly,false);
+                MessageBox.Show(Resources.ConnectionStringSetupForm_TestConnection_Successful,Resources.ConnectionStringSetupForm_TestConnection_Successful_Title,MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1,MessageBoxOptions.DefaultDesktopOnly,false);
                 return true;
             }
             catch (InvalidOperationException exception)
             {
-                MessageBox.Show(exception.Message + "\nPlease report this to the extension publisher.", "Operation Issues", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
+                MessageBox.Show(exception.HResult + Resources.ExceptionCodeMessageSeperator + exception.Message + Resources.ConnectionStringSetupForm_TestConnection_InvalidOperationException, Resources.ConnectionStringSetupForm_TestConnection_InvalidOperationException_Title, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
                 return false;
             }
             catch (SqlException exception)
             {
-                MessageBox.Show(exception.Message, "Connection Issues", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
+                MessageBox.Show(exception.HResult + Resources.ExceptionCodeMessageSeperator + exception.Message, Resources.ConnectionStringSetupForm_ConnectionIssues, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly, false);
                 return false;
             }
             finally

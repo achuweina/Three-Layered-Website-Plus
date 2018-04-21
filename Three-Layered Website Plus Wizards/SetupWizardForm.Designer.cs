@@ -69,394 +69,379 @@
             this.WebsiteCopyrightTextboxToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.HTTPSCheckboxTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.AdminUserTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.SetupWizardControlsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // WebsiteTitleLabel
             // 
-            this.WebsiteTitleLabel.AutoSize = true;
-            this.WebsiteTitleLabel.Location = new System.Drawing.Point(31, 22);
+            resources.ApplyResources(this.WebsiteTitleLabel, "WebsiteTitleLabel");
             this.WebsiteTitleLabel.Name = "WebsiteTitleLabel";
-            this.WebsiteTitleLabel.Size = new System.Drawing.Size(27, 13);
-            this.WebsiteTitleLabel.TabIndex = 0;
-            this.WebsiteTitleLabel.Text = "Title";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.WebsiteTitleLabel, resources.GetString("WebsiteTitleLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.WebsiteTitleLabel, resources.GetString("WebsiteTitleLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.WebsiteTitleLabel, resources.GetString("WebsiteTitleLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.WebsiteTitleLabel, resources.GetString("WebsiteTitleLabel.ToolTip3"));
             // 
             // WebsiteTitleTextbox
             // 
             this.WebsiteTitleTextbox.AcceptsReturn = true;
-            this.WebsiteTitleTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.WebsiteTitleTextbox.Location = new System.Drawing.Point(34, 38);
+            resources.ApplyResources(this.WebsiteTitleTextbox, "WebsiteTitleTextbox");
             this.WebsiteTitleTextbox.Name = "WebsiteTitleTextbox";
-            this.WebsiteTitleTextbox.Size = new System.Drawing.Size(238, 20);
-            this.WebsiteTitleTextbox.TabIndex = 1;
-            this.WebsiteTitleTextboxToolTip.SetToolTip(this.WebsiteTitleTextbox, resources.GetString("WebsiteTitleTextbox.ToolTip"));
+            this.AdminUserTooltip.SetToolTip(this.WebsiteTitleTextbox, resources.GetString("WebsiteTitleTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.WebsiteTitleTextbox, resources.GetString("WebsiteTitleTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.WebsiteTitleTextbox, resources.GetString("WebsiteTitleTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.WebsiteTitleTextbox, resources.GetString("WebsiteTitleTextbox.ToolTip3"));
             // 
             // CopyrightLabel
             // 
-            this.CopyrightLabel.AutoSize = true;
-            this.CopyrightLabel.Location = new System.Drawing.Point(31, 61);
+            resources.ApplyResources(this.CopyrightLabel, "CopyrightLabel");
             this.CopyrightLabel.Name = "CopyrightLabel";
-            this.CopyrightLabel.Size = new System.Drawing.Size(51, 13);
-            this.CopyrightLabel.TabIndex = 2;
-            this.CopyrightLabel.Text = "Copyright";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.CopyrightLabel, resources.GetString("CopyrightLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.CopyrightLabel, resources.GetString("CopyrightLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.CopyrightLabel, resources.GetString("CopyrightLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.CopyrightLabel, resources.GetString("CopyrightLabel.ToolTip3"));
             // 
             // CopyrightTextbox
             // 
             this.CopyrightTextbox.AcceptsReturn = true;
-            this.CopyrightTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CopyrightTextbox.Location = new System.Drawing.Point(34, 77);
+            resources.ApplyResources(this.CopyrightTextbox, "CopyrightTextbox");
             this.CopyrightTextbox.Name = "CopyrightTextbox";
-            this.CopyrightTextbox.Size = new System.Drawing.Size(238, 20);
-            this.CopyrightTextbox.TabIndex = 3;
-            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.CopyrightTextbox, "The text put in here will show at the bottom of the website in the footer.\r\nThis " +
-        "can be empty but this will lead to \"© [This current year] - \" been put in the fo" +
-        "oter.");
+            this.AdminUserTooltip.SetToolTip(this.CopyrightTextbox, resources.GetString("CopyrightTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.CopyrightTextbox, resources.GetString("CopyrightTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.CopyrightTextbox, resources.GetString("CopyrightTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.CopyrightTextbox, resources.GetString("CopyrightTextbox.ToolTip3"));
             // 
             // HTTPSCheckbox
             // 
-            this.HTTPSCheckbox.AutoSize = true;
+            resources.ApplyResources(this.HTTPSCheckbox, "HTTPSCheckbox");
             this.HTTPSCheckbox.Checked = true;
             this.HTTPSCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.HTTPSCheckbox.Location = new System.Drawing.Point(34, 103);
             this.HTTPSCheckbox.Name = "HTTPSCheckbox";
-            this.HTTPSCheckbox.Size = new System.Drawing.Size(120, 17);
-            this.HTTPSCheckbox.TabIndex = 4;
-            this.HTTPSCheckbox.Text = "HTTPS everywhere";
-            this.HTTPSCheckboxTooltip.SetToolTip(this.HTTPSCheckbox, resources.GetString("HTTPSCheckbox.ToolTip"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.HTTPSCheckbox, resources.GetString("HTTPSCheckbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.HTTPSCheckbox, resources.GetString("HTTPSCheckbox.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.HTTPSCheckbox, resources.GetString("HTTPSCheckbox.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.HTTPSCheckbox, resources.GetString("HTTPSCheckbox.ToolTip3"));
             this.HTTPSCheckbox.UseVisualStyleBackColor = true;
             // 
             // WebsiteSetupLabel
             // 
-            this.WebsiteSetupLabel.AutoSize = true;
-            this.WebsiteSetupLabel.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.WebsiteSetupLabel, "WebsiteSetupLabel");
             this.WebsiteSetupLabel.Name = "WebsiteSetupLabel";
-            this.WebsiteSetupLabel.Size = new System.Drawing.Size(46, 13);
-            this.WebsiteSetupLabel.TabIndex = 5;
-            this.WebsiteSetupLabel.Text = "Website";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.WebsiteSetupLabel, resources.GetString("WebsiteSetupLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.WebsiteSetupLabel, resources.GetString("WebsiteSetupLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.WebsiteSetupLabel, resources.GetString("WebsiteSetupLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.WebsiteSetupLabel, resources.GetString("WebsiteSetupLabel.ToolTip3"));
             // 
             // DatabaseSetupLabel
             // 
-            this.DatabaseSetupLabel.AutoSize = true;
-            this.DatabaseSetupLabel.Location = new System.Drawing.Point(12, 123);
+            resources.ApplyResources(this.DatabaseSetupLabel, "DatabaseSetupLabel");
             this.DatabaseSetupLabel.Name = "DatabaseSetupLabel";
-            this.DatabaseSetupLabel.Size = new System.Drawing.Size(53, 13);
-            this.DatabaseSetupLabel.TabIndex = 6;
-            this.DatabaseSetupLabel.Text = "Database";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.DatabaseSetupLabel, resources.GetString("DatabaseSetupLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.DatabaseSetupLabel, resources.GetString("DatabaseSetupLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.DatabaseSetupLabel, resources.GetString("DatabaseSetupLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.DatabaseSetupLabel, resources.GetString("DatabaseSetupLabel.ToolTip3"));
             // 
             // ConnectionStringTextbox
             // 
             this.ConnectionStringTextbox.AcceptsReturn = true;
-            this.ConnectionStringTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConnectionStringTextbox.Enabled = false;
-            this.ConnectionStringTextbox.Location = new System.Drawing.Point(34, 152);
+            resources.ApplyResources(this.ConnectionStringTextbox, "ConnectionStringTextbox");
             this.ConnectionStringTextbox.Name = "ConnectionStringTextbox";
             this.ConnectionStringTextbox.ReadOnly = true;
-            this.ConnectionStringTextbox.Size = new System.Drawing.Size(168, 20);
-            this.ConnectionStringTextbox.TabIndex = 8;
+            this.AdminUserTooltip.SetToolTip(this.ConnectionStringTextbox, resources.GetString("ConnectionStringTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.ConnectionStringTextbox, resources.GetString("ConnectionStringTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.ConnectionStringTextbox, resources.GetString("ConnectionStringTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.ConnectionStringTextbox, resources.GetString("ConnectionStringTextbox.ToolTip3"));
             // 
             // ConnectionStringLabel
             // 
-            this.ConnectionStringLabel.AutoSize = true;
-            this.ConnectionStringLabel.Location = new System.Drawing.Point(31, 136);
+            resources.ApplyResources(this.ConnectionStringLabel, "ConnectionStringLabel");
             this.ConnectionStringLabel.Name = "ConnectionStringLabel";
-            this.ConnectionStringLabel.Size = new System.Drawing.Size(89, 13);
-            this.ConnectionStringLabel.TabIndex = 7;
-            this.ConnectionStringLabel.Text = "Connection string";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.ConnectionStringLabel, resources.GetString("ConnectionStringLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.ConnectionStringLabel, resources.GetString("ConnectionStringLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.ConnectionStringLabel, resources.GetString("ConnectionStringLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.ConnectionStringLabel, resources.GetString("ConnectionStringLabel.ToolTip3"));
             // 
             // ConnectionStringSetButton
             // 
-            this.ConnectionStringSetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConnectionStringSetButton.Location = new System.Drawing.Point(208, 152);
+            resources.ApplyResources(this.ConnectionStringSetButton, "ConnectionStringSetButton");
             this.ConnectionStringSetButton.Name = "ConnectionStringSetButton";
-            this.ConnectionStringSetButton.Size = new System.Drawing.Size(64, 20);
-            this.ConnectionStringSetButton.TabIndex = 9;
-            this.ConnectionStringSetButton.Text = "Set";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.ConnectionStringSetButton, resources.GetString("ConnectionStringSetButton.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.ConnectionStringSetButton, resources.GetString("ConnectionStringSetButton.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.ConnectionStringSetButton, resources.GetString("ConnectionStringSetButton.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.ConnectionStringSetButton, resources.GetString("ConnectionStringSetButton.ToolTip3"));
             this.ConnectionStringSetButton.UseVisualStyleBackColor = true;
             this.ConnectionStringSetButton.Click += new System.EventHandler(this.ConnectionStringSetButton_Click);
             // 
             // WebsiteSecurityLabel
             // 
-            this.WebsiteSecurityLabel.AutoSize = true;
-            this.WebsiteSecurityLabel.Location = new System.Drawing.Point(12, 175);
+            resources.ApplyResources(this.WebsiteSecurityLabel, "WebsiteSecurityLabel");
             this.WebsiteSecurityLabel.Name = "WebsiteSecurityLabel";
-            this.WebsiteSecurityLabel.Size = new System.Drawing.Size(85, 13);
-            this.WebsiteSecurityLabel.TabIndex = 10;
-            this.WebsiteSecurityLabel.Text = "Website security";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.WebsiteSecurityLabel, resources.GetString("WebsiteSecurityLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.WebsiteSecurityLabel, resources.GetString("WebsiteSecurityLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.WebsiteSecurityLabel, resources.GetString("WebsiteSecurityLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.WebsiteSecurityLabel, resources.GetString("WebsiteSecurityLabel.ToolTip3"));
             // 
             // AdminUserLabel
             // 
-            this.AdminUserLabel.AutoSize = true;
-            this.AdminUserLabel.Location = new System.Drawing.Point(31, 188);
+            resources.ApplyResources(this.AdminUserLabel, "AdminUserLabel");
             this.AdminUserLabel.Name = "AdminUserLabel";
-            this.AdminUserLabel.Size = new System.Drawing.Size(59, 13);
-            this.AdminUserLabel.TabIndex = 11;
-            this.AdminUserLabel.Text = "Admin user";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserLabel, resources.GetString("AdminUserLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserLabel, resources.GetString("AdminUserLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserLabel, resources.GetString("AdminUserLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.AdminUserLabel, resources.GetString("AdminUserLabel.ToolTip3"));
             // 
             // AdminUserUsernameTextbox
             // 
             this.AdminUserUsernameTextbox.AcceptsReturn = true;
-            this.AdminUserUsernameTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdminUserUsernameTextbox.Location = new System.Drawing.Point(49, 217);
+            resources.ApplyResources(this.AdminUserUsernameTextbox, "AdminUserUsernameTextbox");
             this.AdminUserUsernameTextbox.Name = "AdminUserUsernameTextbox";
-            this.AdminUserUsernameTextbox.Size = new System.Drawing.Size(223, 20);
-            this.AdminUserUsernameTextbox.TabIndex = 13;
             this.AdminUserTooltip.SetToolTip(this.AdminUserUsernameTextbox, resources.GetString("AdminUserUsernameTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserUsernameTextbox, resources.GetString("AdminUserUsernameTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserUsernameTextbox, resources.GetString("AdminUserUsernameTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserUsernameTextbox, resources.GetString("AdminUserUsernameTextbox.ToolTip3"));
             this.AdminUserUsernameTextbox.TextChanged += new System.EventHandler(this.AdminUserSection_TextChanged);
             // 
             // AdminUserUsernameLabel
             // 
-            this.AdminUserUsernameLabel.AutoSize = true;
-            this.AdminUserUsernameLabel.Location = new System.Drawing.Point(46, 201);
+            resources.ApplyResources(this.AdminUserUsernameLabel, "AdminUserUsernameLabel");
             this.AdminUserUsernameLabel.Name = "AdminUserUsernameLabel";
-            this.AdminUserUsernameLabel.Size = new System.Drawing.Size(55, 13);
-            this.AdminUserUsernameLabel.TabIndex = 12;
-            this.AdminUserUsernameLabel.Text = "Username";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserUsernameLabel, resources.GetString("AdminUserUsernameLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserUsernameLabel, resources.GetString("AdminUserUsernameLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserUsernameLabel, resources.GetString("AdminUserUsernameLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.AdminUserUsernameLabel, resources.GetString("AdminUserUsernameLabel.ToolTip3"));
             // 
             // AdminUserPasswordTextbox
             // 
             this.AdminUserPasswordTextbox.AcceptsReturn = true;
-            this.AdminUserPasswordTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdminUserPasswordTextbox.Location = new System.Drawing.Point(49, 256);
+            resources.ApplyResources(this.AdminUserPasswordTextbox, "AdminUserPasswordTextbox");
             this.AdminUserPasswordTextbox.Name = "AdminUserPasswordTextbox";
-            this.AdminUserPasswordTextbox.PasswordChar = '*';
-            this.AdminUserPasswordTextbox.Size = new System.Drawing.Size(223, 20);
-            this.AdminUserPasswordTextbox.TabIndex = 15;
             this.AdminUserTooltip.SetToolTip(this.AdminUserPasswordTextbox, resources.GetString("AdminUserPasswordTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserPasswordTextbox, resources.GetString("AdminUserPasswordTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserPasswordTextbox, resources.GetString("AdminUserPasswordTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserPasswordTextbox, resources.GetString("AdminUserPasswordTextbox.ToolTip3"));
             // 
             // AdminUserPasswordLabel
             // 
-            this.AdminUserPasswordLabel.AutoSize = true;
-            this.AdminUserPasswordLabel.Location = new System.Drawing.Point(46, 240);
+            resources.ApplyResources(this.AdminUserPasswordLabel, "AdminUserPasswordLabel");
             this.AdminUserPasswordLabel.Name = "AdminUserPasswordLabel";
-            this.AdminUserPasswordLabel.Size = new System.Drawing.Size(53, 13);
-            this.AdminUserPasswordLabel.TabIndex = 14;
-            this.AdminUserPasswordLabel.Text = "Password";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserPasswordLabel, resources.GetString("AdminUserPasswordLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserPasswordLabel, resources.GetString("AdminUserPasswordLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserPasswordLabel, resources.GetString("AdminUserPasswordLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.AdminUserPasswordLabel, resources.GetString("AdminUserPasswordLabel.ToolTip3"));
             // 
             // AdminUserSecurityQuestionTextbox
             // 
             this.AdminUserSecurityQuestionTextbox.AcceptsReturn = true;
-            this.AdminUserSecurityQuestionTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdminUserSecurityQuestionTextbox.Location = new System.Drawing.Point(49, 295);
+            resources.ApplyResources(this.AdminUserSecurityQuestionTextbox, "AdminUserSecurityQuestionTextbox");
             this.AdminUserSecurityQuestionTextbox.Name = "AdminUserSecurityQuestionTextbox";
-            this.AdminUserSecurityQuestionTextbox.Size = new System.Drawing.Size(223, 20);
-            this.AdminUserSecurityQuestionTextbox.TabIndex = 17;
-            this.AdminUserTooltip.SetToolTip(this.AdminUserSecurityQuestionTextbox, "The security question that the admin user will answer to reset there password for" +
-        " the website.");
+            this.AdminUserTooltip.SetToolTip(this.AdminUserSecurityQuestionTextbox, resources.GetString("AdminUserSecurityQuestionTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserSecurityQuestionTextbox, resources.GetString("AdminUserSecurityQuestionTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserSecurityQuestionTextbox, resources.GetString("AdminUserSecurityQuestionTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserSecurityQuestionTextbox, resources.GetString("AdminUserSecurityQuestionTextbox.ToolTip3"));
             // 
             // AdminUserSecuirtyQuestionsLabel
             // 
-            this.AdminUserSecuirtyQuestionsLabel.AutoSize = true;
-            this.AdminUserSecuirtyQuestionsLabel.Location = new System.Drawing.Point(46, 279);
+            resources.ApplyResources(this.AdminUserSecuirtyQuestionsLabel, "AdminUserSecuirtyQuestionsLabel");
             this.AdminUserSecuirtyQuestionsLabel.Name = "AdminUserSecuirtyQuestionsLabel";
-            this.AdminUserSecuirtyQuestionsLabel.Size = new System.Drawing.Size(88, 13);
-            this.AdminUserSecuirtyQuestionsLabel.TabIndex = 16;
-            this.AdminUserSecuirtyQuestionsLabel.Text = "Security question";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserSecuirtyQuestionsLabel, resources.GetString("AdminUserSecuirtyQuestionsLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserSecuirtyQuestionsLabel, resources.GetString("AdminUserSecuirtyQuestionsLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserSecuirtyQuestionsLabel, resources.GetString("AdminUserSecuirtyQuestionsLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.AdminUserSecuirtyQuestionsLabel, resources.GetString("AdminUserSecuirtyQuestionsLabel.ToolTip3"));
             // 
             // AdminUserAnswerTextbox
             // 
             this.AdminUserAnswerTextbox.AcceptsReturn = true;
-            this.AdminUserAnswerTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdminUserAnswerTextbox.Location = new System.Drawing.Point(49, 334);
+            resources.ApplyResources(this.AdminUserAnswerTextbox, "AdminUserAnswerTextbox");
             this.AdminUserAnswerTextbox.Name = "AdminUserAnswerTextbox";
-            this.AdminUserAnswerTextbox.Size = new System.Drawing.Size(223, 20);
-            this.AdminUserAnswerTextbox.TabIndex = 19;
-            this.AdminUserTooltip.SetToolTip(this.AdminUserAnswerTextbox, "The answer to the security question that the admin user will answer to reset ther" +
-        "e password for the website.");
+            this.AdminUserTooltip.SetToolTip(this.AdminUserAnswerTextbox, resources.GetString("AdminUserAnswerTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserAnswerTextbox, resources.GetString("AdminUserAnswerTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserAnswerTextbox, resources.GetString("AdminUserAnswerTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserAnswerTextbox, resources.GetString("AdminUserAnswerTextbox.ToolTip3"));
             // 
             // AdminUserSecurityAnswerLabel
             // 
-            this.AdminUserSecurityAnswerLabel.AutoSize = true;
-            this.AdminUserSecurityAnswerLabel.Location = new System.Drawing.Point(46, 318);
+            resources.ApplyResources(this.AdminUserSecurityAnswerLabel, "AdminUserSecurityAnswerLabel");
             this.AdminUserSecurityAnswerLabel.Name = "AdminUserSecurityAnswerLabel";
-            this.AdminUserSecurityAnswerLabel.Size = new System.Drawing.Size(82, 13);
-            this.AdminUserSecurityAnswerLabel.TabIndex = 18;
-            this.AdminUserSecurityAnswerLabel.Text = "Security answer";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserSecurityAnswerLabel, resources.GetString("AdminUserSecurityAnswerLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserSecurityAnswerLabel, resources.GetString("AdminUserSecurityAnswerLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserSecurityAnswerLabel, resources.GetString("AdminUserSecurityAnswerLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.AdminUserSecurityAnswerLabel, resources.GetString("AdminUserSecurityAnswerLabel.ToolTip3"));
             // 
             // AdminUserEmailTextbox
             // 
             this.AdminUserEmailTextbox.AcceptsReturn = true;
-            this.AdminUserEmailTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdminUserEmailTextbox.Location = new System.Drawing.Point(49, 373);
+            resources.ApplyResources(this.AdminUserEmailTextbox, "AdminUserEmailTextbox");
             this.AdminUserEmailTextbox.Name = "AdminUserEmailTextbox";
-            this.AdminUserEmailTextbox.Size = new System.Drawing.Size(223, 20);
-            this.AdminUserEmailTextbox.TabIndex = 21;
-            this.AdminUserTooltip.SetToolTip(this.AdminUserEmailTextbox, "The email for the admin user that a password reset will be sent to by the website" +
-        ".");
+            this.AdminUserTooltip.SetToolTip(this.AdminUserEmailTextbox, resources.GetString("AdminUserEmailTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserEmailTextbox, resources.GetString("AdminUserEmailTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserEmailTextbox, resources.GetString("AdminUserEmailTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserEmailTextbox, resources.GetString("AdminUserEmailTextbox.ToolTip3"));
             this.AdminUserEmailTextbox.TextChanged += new System.EventHandler(this.AdminUserSection_TextChanged);
             // 
             // AdminUserEmailLabel
             // 
-            this.AdminUserEmailLabel.AutoSize = true;
-            this.AdminUserEmailLabel.Location = new System.Drawing.Point(46, 357);
+            resources.ApplyResources(this.AdminUserEmailLabel, "AdminUserEmailLabel");
             this.AdminUserEmailLabel.Name = "AdminUserEmailLabel";
-            this.AdminUserEmailLabel.Size = new System.Drawing.Size(32, 13);
-            this.AdminUserEmailLabel.TabIndex = 20;
-            this.AdminUserEmailLabel.Text = "Email";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AdminUserEmailLabel, resources.GetString("AdminUserEmailLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AdminUserEmailLabel, resources.GetString("AdminUserEmailLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AdminUserEmailLabel, resources.GetString("AdminUserEmailLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.AdminUserEmailLabel, resources.GetString("AdminUserEmailLabel.ToolTip3"));
             // 
             // RolesLabel
             // 
-            this.RolesLabel.AutoSize = true;
-            this.RolesLabel.Location = new System.Drawing.Point(31, 396);
+            resources.ApplyResources(this.RolesLabel, "RolesLabel");
             this.RolesLabel.Name = "RolesLabel";
-            this.RolesLabel.Size = new System.Drawing.Size(34, 13);
-            this.RolesLabel.TabIndex = 22;
-            this.RolesLabel.Text = "Roles";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.RolesLabel, resources.GetString("RolesLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.RolesLabel, resources.GetString("RolesLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.RolesLabel, resources.GetString("RolesLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.RolesLabel, resources.GetString("RolesLabel.ToolTip3"));
             // 
             // RolesListbox
             // 
-            this.RolesListbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.RolesListbox, "RolesListbox");
             this.RolesListbox.FormattingEnabled = true;
             this.RolesListbox.Items.AddRange(new object[] {
-            "Administrator",
-            "Default"});
-            this.RolesListbox.Location = new System.Drawing.Point(49, 412);
+            resources.GetString("RolesListbox.Items"),
+            resources.GetString("RolesListbox.Items1")});
             this.RolesListbox.Name = "RolesListbox";
-            this.RolesListbox.Size = new System.Drawing.Size(223, 69);
-            this.RolesListbox.TabIndex = 23;
+            this.HTTPSCheckboxTooltip.SetToolTip(this.RolesListbox, resources.GetString("RolesListbox.ToolTip"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.RolesListbox, resources.GetString("RolesListbox.ToolTip1"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.RolesListbox, resources.GetString("RolesListbox.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.RolesListbox, resources.GetString("RolesListbox.ToolTip3"));
             // 
             // RoleAddButton
             // 
-            this.RoleAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RoleAddButton.Location = new System.Drawing.Point(167, 487);
+            resources.ApplyResources(this.RoleAddButton, "RoleAddButton");
             this.RoleAddButton.Name = "RoleAddButton";
-            this.RoleAddButton.Size = new System.Drawing.Size(35, 23);
-            this.RoleAddButton.TabIndex = 24;
-            this.RoleAddButton.Text = "Add";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.RoleAddButton, resources.GetString("RoleAddButton.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.RoleAddButton, resources.GetString("RoleAddButton.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.RoleAddButton, resources.GetString("RoleAddButton.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.RoleAddButton, resources.GetString("RoleAddButton.ToolTip3"));
             this.RoleAddButton.UseVisualStyleBackColor = true;
             this.RoleAddButton.Click += new System.EventHandler(this.RoleAddButton_Click);
             // 
             // RemoveRoleButton
             // 
-            this.RemoveRoleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RemoveRoleButton.Location = new System.Drawing.Point(208, 487);
+            resources.ApplyResources(this.RemoveRoleButton, "RemoveRoleButton");
             this.RemoveRoleButton.Name = "RemoveRoleButton";
-            this.RemoveRoleButton.Size = new System.Drawing.Size(64, 23);
-            this.RemoveRoleButton.TabIndex = 25;
-            this.RemoveRoleButton.Text = "Remove";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.RemoveRoleButton, resources.GetString("RemoveRoleButton.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.RemoveRoleButton, resources.GetString("RemoveRoleButton.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.RemoveRoleButton, resources.GetString("RemoveRoleButton.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.RemoveRoleButton, resources.GetString("RemoveRoleButton.ToolTip3"));
             this.RemoveRoleButton.UseVisualStyleBackColor = true;
             this.RemoveRoleButton.Click += new System.EventHandler(this.RemoveRoleButton_Click);
             // 
             // RoleNameTextbox
             // 
             this.RoleNameTextbox.AcceptsReturn = true;
-            this.RoleNameTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RoleNameTextbox.Location = new System.Drawing.Point(49, 489);
+            resources.ApplyResources(this.RoleNameTextbox, "RoleNameTextbox");
             this.RoleNameTextbox.Name = "RoleNameTextbox";
-            this.RoleNameTextbox.Size = new System.Drawing.Size(112, 20);
-            this.RoleNameTextbox.TabIndex = 26;
+            this.AdminUserTooltip.SetToolTip(this.RoleNameTextbox, resources.GetString("RoleNameTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.RoleNameTextbox, resources.GetString("RoleNameTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.RoleNameTextbox, resources.GetString("RoleNameTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.RoleNameTextbox, resources.GetString("RoleNameTextbox.ToolTip3"));
             // 
             // SecurityQuestionTextTextbox
             // 
             this.SecurityQuestionTextTextbox.AcceptsReturn = true;
-            this.SecurityQuestionTextTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SecurityQuestionTextTextbox.Location = new System.Drawing.Point(49, 605);
+            resources.ApplyResources(this.SecurityQuestionTextTextbox, "SecurityQuestionTextTextbox");
             this.SecurityQuestionTextTextbox.Name = "SecurityQuestionTextTextbox";
-            this.SecurityQuestionTextTextbox.Size = new System.Drawing.Size(112, 20);
-            this.SecurityQuestionTextTextbox.TabIndex = 31;
+            this.AdminUserTooltip.SetToolTip(this.SecurityQuestionTextTextbox, resources.GetString("SecurityQuestionTextTextbox.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.SecurityQuestionTextTextbox, resources.GetString("SecurityQuestionTextTextbox.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.SecurityQuestionTextTextbox, resources.GetString("SecurityQuestionTextTextbox.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.SecurityQuestionTextTextbox, resources.GetString("SecurityQuestionTextTextbox.ToolTip3"));
             // 
             // RemoveSecurityQuestionButton
             // 
-            this.RemoveSecurityQuestionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RemoveSecurityQuestionButton.Location = new System.Drawing.Point(208, 603);
+            resources.ApplyResources(this.RemoveSecurityQuestionButton, "RemoveSecurityQuestionButton");
             this.RemoveSecurityQuestionButton.Name = "RemoveSecurityQuestionButton";
-            this.RemoveSecurityQuestionButton.Size = new System.Drawing.Size(64, 23);
-            this.RemoveSecurityQuestionButton.TabIndex = 30;
-            this.RemoveSecurityQuestionButton.Text = "Remove";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.RemoveSecurityQuestionButton, resources.GetString("RemoveSecurityQuestionButton.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.RemoveSecurityQuestionButton, resources.GetString("RemoveSecurityQuestionButton.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.RemoveSecurityQuestionButton, resources.GetString("RemoveSecurityQuestionButton.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.RemoveSecurityQuestionButton, resources.GetString("RemoveSecurityQuestionButton.ToolTip3"));
             this.RemoveSecurityQuestionButton.UseVisualStyleBackColor = true;
             this.RemoveSecurityQuestionButton.Click += new System.EventHandler(this.RemoveSecurityQuestionButton_Click);
             // 
             // AddSecurityQuestionButton
             // 
-            this.AddSecurityQuestionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddSecurityQuestionButton.Location = new System.Drawing.Point(167, 603);
+            resources.ApplyResources(this.AddSecurityQuestionButton, "AddSecurityQuestionButton");
             this.AddSecurityQuestionButton.Name = "AddSecurityQuestionButton";
-            this.AddSecurityQuestionButton.Size = new System.Drawing.Size(35, 23);
-            this.AddSecurityQuestionButton.TabIndex = 29;
-            this.AddSecurityQuestionButton.Text = "Add";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.AddSecurityQuestionButton, resources.GetString("AddSecurityQuestionButton.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.AddSecurityQuestionButton, resources.GetString("AddSecurityQuestionButton.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.AddSecurityQuestionButton, resources.GetString("AddSecurityQuestionButton.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.AddSecurityQuestionButton, resources.GetString("AddSecurityQuestionButton.ToolTip3"));
             this.AddSecurityQuestionButton.UseVisualStyleBackColor = true;
             this.AddSecurityQuestionButton.Click += new System.EventHandler(this.AddSecurityQuestionButton_Click);
             // 
             // SecurityQuestionListbox
             // 
-            this.SecurityQuestionListbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.SecurityQuestionListbox, "SecurityQuestionListbox");
             this.SecurityQuestionListbox.FormattingEnabled = true;
             this.SecurityQuestionListbox.Items.AddRange(new object[] {
-            "What is the first and last name of your first boyfriend or girlfriend?",
-            "Which phone number do you remember most from your childhood?",
-            "What was your favorite place to visit as a child?",
-            "Who is your favorite actor, musician, or artist?",
-            "What is the name of your favorite pet?",
-            "In what city were you born?",
-            "What high school did you attend?",
-            "What is your mother\'s maiden name?",
-            "What street did you grow up on?",
-            "What was the make of your first car?",
-            "When is your anniversary?",
-            "What is your favorite color?",
-            "What is your father\'s middle name?",
-            "What is the name of your first grade teacher?",
-            "What was your high school mascot?",
-            "Which is your favorite web browser?"});
-            this.SecurityQuestionListbox.Location = new System.Drawing.Point(49, 528);
+            resources.GetString("SecurityQuestionListbox.Items"),
+            resources.GetString("SecurityQuestionListbox.Items1"),
+            resources.GetString("SecurityQuestionListbox.Items2"),
+            resources.GetString("SecurityQuestionListbox.Items3"),
+            resources.GetString("SecurityQuestionListbox.Items4"),
+            resources.GetString("SecurityQuestionListbox.Items5"),
+            resources.GetString("SecurityQuestionListbox.Items6"),
+            resources.GetString("SecurityQuestionListbox.Items7"),
+            resources.GetString("SecurityQuestionListbox.Items8"),
+            resources.GetString("SecurityQuestionListbox.Items9"),
+            resources.GetString("SecurityQuestionListbox.Items10"),
+            resources.GetString("SecurityQuestionListbox.Items11"),
+            resources.GetString("SecurityQuestionListbox.Items12"),
+            resources.GetString("SecurityQuestionListbox.Items13"),
+            resources.GetString("SecurityQuestionListbox.Items14"),
+            resources.GetString("SecurityQuestionListbox.Items15")});
             this.SecurityQuestionListbox.Name = "SecurityQuestionListbox";
-            this.SecurityQuestionListbox.Size = new System.Drawing.Size(223, 69);
-            this.SecurityQuestionListbox.TabIndex = 28;
+            this.HTTPSCheckboxTooltip.SetToolTip(this.SecurityQuestionListbox, resources.GetString("SecurityQuestionListbox.ToolTip"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.SecurityQuestionListbox, resources.GetString("SecurityQuestionListbox.ToolTip1"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.SecurityQuestionListbox, resources.GetString("SecurityQuestionListbox.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.SecurityQuestionListbox, resources.GetString("SecurityQuestionListbox.ToolTip3"));
             // 
             // SecurityQuestionsLabel
             // 
-            this.SecurityQuestionsLabel.AutoSize = true;
-            this.SecurityQuestionsLabel.Location = new System.Drawing.Point(31, 512);
+            resources.ApplyResources(this.SecurityQuestionsLabel, "SecurityQuestionsLabel");
             this.SecurityQuestionsLabel.Name = "SecurityQuestionsLabel";
-            this.SecurityQuestionsLabel.Size = new System.Drawing.Size(93, 13);
-            this.SecurityQuestionsLabel.TabIndex = 27;
-            this.SecurityQuestionsLabel.Text = "Security questions";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.SecurityQuestionsLabel, resources.GetString("SecurityQuestionsLabel.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.SecurityQuestionsLabel, resources.GetString("SecurityQuestionsLabel.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.SecurityQuestionsLabel, resources.GetString("SecurityQuestionsLabel.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.SecurityQuestionsLabel, resources.GetString("SecurityQuestionsLabel.ToolTip3"));
             // 
             // SetupWizardFormCancelButton
             // 
+            resources.ApplyResources(this.SetupWizardFormCancelButton, "SetupWizardFormCancelButton");
             this.SetupWizardFormCancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.SetupWizardFormCancelButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.SetupWizardFormCancelButton.Location = new System.Drawing.Point(218, 0);
             this.SetupWizardFormCancelButton.Name = "SetupWizardFormCancelButton";
-            this.SetupWizardFormCancelButton.Size = new System.Drawing.Size(64, 25);
-            this.SetupWizardFormCancelButton.TabIndex = 32;
-            this.SetupWizardFormCancelButton.Text = "Cancel";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.SetupWizardFormCancelButton, resources.GetString("SetupWizardFormCancelButton.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.SetupWizardFormCancelButton, resources.GetString("SetupWizardFormCancelButton.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.SetupWizardFormCancelButton, resources.GetString("SetupWizardFormCancelButton.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.SetupWizardFormCancelButton, resources.GetString("SetupWizardFormCancelButton.ToolTip3"));
             this.SetupWizardFormCancelButton.UseVisualStyleBackColor = true;
             this.SetupWizardFormCancelButton.Click += new System.EventHandler(this.SetupWizardFormCancelButton_Click);
             // 
             // SetupWizardFormOkButton
             // 
-            this.SetupWizardFormOkButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.SetupWizardFormOkButton.Location = new System.Drawing.Point(154, 0);
+            resources.ApplyResources(this.SetupWizardFormOkButton, "SetupWizardFormOkButton");
             this.SetupWizardFormOkButton.Name = "SetupWizardFormOkButton";
-            this.SetupWizardFormOkButton.Size = new System.Drawing.Size(64, 25);
-            this.SetupWizardFormOkButton.TabIndex = 33;
-            this.SetupWizardFormOkButton.Text = "OK";
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.SetupWizardFormOkButton, resources.GetString("SetupWizardFormOkButton.ToolTip"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.SetupWizardFormOkButton, resources.GetString("SetupWizardFormOkButton.ToolTip1"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.SetupWizardFormOkButton, resources.GetString("SetupWizardFormOkButton.ToolTip2"));
+            this.AdminUserTooltip.SetToolTip(this.SetupWizardFormOkButton, resources.GetString("SetupWizardFormOkButton.ToolTip3"));
             this.SetupWizardFormOkButton.UseVisualStyleBackColor = true;
             this.SetupWizardFormOkButton.Click += new System.EventHandler(this.SetupWizardFormOkButton_Click);
             // 
             // SetupWizardControlsPanel
             // 
+            resources.ApplyResources(this.SetupWizardControlsPanel, "SetupWizardControlsPanel");
             this.SetupWizardControlsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SetupWizardControlsPanel.Controls.Add(this.SetupWizardFormOkButton);
             this.SetupWizardControlsPanel.Controls.Add(this.SetupWizardFormCancelButton);
-            this.SetupWizardControlsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.SetupWizardControlsPanel.Location = new System.Drawing.Point(0, 633);
             this.SetupWizardControlsPanel.Name = "SetupWizardControlsPanel";
-            this.SetupWizardControlsPanel.Size = new System.Drawing.Size(284, 27);
-            this.SetupWizardControlsPanel.TabIndex = 34;
+            this.AdminUserTooltip.SetToolTip(this.SetupWizardControlsPanel, resources.GetString("SetupWizardControlsPanel.ToolTip"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this.SetupWizardControlsPanel, resources.GetString("SetupWizardControlsPanel.ToolTip1"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this.SetupWizardControlsPanel, resources.GetString("SetupWizardControlsPanel.ToolTip2"));
+            this.HTTPSCheckboxTooltip.SetToolTip(this.SetupWizardControlsPanel, resources.GetString("SetupWizardControlsPanel.ToolTip3"));
             // 
             // WebsiteTitleTextboxToolTip
             // 
@@ -482,24 +467,13 @@
             this.AdminUserTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.AdminUserTooltip.ToolTipTitle = "Admin user details";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(249, -2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 13);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "1.1";
-            // 
             // SetupWizardForm
             // 
             this.AcceptButton = this.SetupWizardFormOkButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.SetupWizardFormCancelButton;
-            this.ClientSize = new System.Drawing.Size(284, 660);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.SetupWizardControlsPanel);
             this.Controls.Add(this.SecurityQuestionTextTextbox);
             this.Controls.Add(this.RemoveSecurityQuestionButton);
@@ -538,8 +512,10 @@
             this.Name = "SetupWizardForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Setup";
+            this.HTTPSCheckboxTooltip.SetToolTip(this, resources.GetString("$this.ToolTip"));
+            this.AdminUserTooltip.SetToolTip(this, resources.GetString("$this.ToolTip1"));
+            this.WebsiteTitleTextboxToolTip.SetToolTip(this, resources.GetString("$this.ToolTip2"));
+            this.WebsiteCopyrightTextboxToolTip.SetToolTip(this, resources.GetString("$this.ToolTip3"));
             this.TopMost = true;
             this.SetupWizardControlsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -588,6 +564,5 @@
         private System.Windows.Forms.ToolTip WebsiteCopyrightTextboxToolTip;
         private System.Windows.Forms.ToolTip HTTPSCheckboxTooltip;
         private System.Windows.Forms.ToolTip AdminUserTooltip;
-        private System.Windows.Forms.Label label1;
     }
 }
