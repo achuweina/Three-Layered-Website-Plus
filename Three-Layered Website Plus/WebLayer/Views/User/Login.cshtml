@@ -1,11 +1,12 @@
-﻿@model $safeprojectname$.Models.User.Login
-<h2>Login</h2>
+﻿@using$safeprojectname$.Properties;
+@model $safeprojectname$.Models.User.Login
+<h2>@Resource.Login_Title</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     @Html.ValidationMessage("Validation")
-
+    <br />
     @Html.LabelFor(x => x.Username)
     <br />
     @Html.ValidationMessageFor(x => x.Username) <br />
@@ -18,11 +19,11 @@
     @Html.PasswordFor(x => x.Password)
     <br />
     <br />
-    @Html.LabelFor(x => x.KeepLoggedIn,"Keep Logged In")
+    @Html.LabelFor(x => x.KeepLoggedIn)
     <br />
     @Html.CheckBoxFor(x => x.KeepLoggedIn)
     <br />
     <br />
     <br />
-    <input type="submit" value="Login" />
+    <input type="submit" value="@Resource.Login_LoginButton" />
 }

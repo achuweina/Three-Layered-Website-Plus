@@ -15,6 +15,8 @@
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" TargetFileName="$projectname$.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\Resource.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true">Properties\Resource.Designer.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">favicon.ico</ProjectItem>
       <ProjectItem ReplaceParameters="true">Web.config</ProjectItem>
       <ProjectItem ReplaceParameters="true">Web.Dev.config</ProjectItem>
@@ -27,6 +29,7 @@
       <ProjectItem ReplaceParameters="true">Controllers\HomeController.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Controllers\UserController.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">CustomErrors\Error.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true">CustomAttributes\LocalizedDisplayNameAttribute.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Models\User\Login.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\_ViewStart.cshtml</ProjectItem>
       <ProjectItem ReplaceParameters="true">Views\Web.config</ProjectItem>
