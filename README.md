@@ -14,7 +14,9 @@ A Visual Studio template for the three layered website and cross cutting setup
 - Allow different authentication modes
 - Allow naming of database in Wizard
 
-If you would like to add to the road map please create a pull request and update the road map (see rules on creating a pull request)
+Not seeing somthing you want add a:
+- [Feature](/issues/new?template=enhancement.md)
+- [Bug](/issues/new?template=bug.md)
 
 ## How to contribute?
 If you would like to add to the project please do but I would ask that you create an issue in GitHub for the feature, bug fix.
