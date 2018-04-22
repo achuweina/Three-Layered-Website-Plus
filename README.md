@@ -15,9 +15,8 @@ A Visual Studio template for the three layered website and cross cutting setup
 - Allow naming of database in Wizard
 
 Not seeing somthing you want add a:
-- [Feature](/issues/new?template=enhancement.md)
-- [Bug](/issues/new?template=bug.md)
-
+- [Feature](https://github.com/TechLiam/Three-Layered-Website-Plus/issues/new?template=enhancement.md)
+- [Bug](https://github.com/TechLiam/Three-Layered-Website-Plus/issues/new?template=bug.md)
 ## How to contribute?
 If you would like to add to the project please do but I would ask that you create an issue in GitHub for the feature, bug fix.
 
